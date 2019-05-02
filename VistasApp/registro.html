@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Contact form</title>
+    <script type="text/javascript"></script>
+
+
+
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        $(document).ready(function() {
+            $('#contact_form').bootstrapValidator({
+                    // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
+                    feedbackIcons: {
+                        valid: 'glyphicon glyphicon-ok',
+                        invalid: 'glyphicon glyphicon-remove',
+                        validating: 'glyphicon glyphicon-refresh'
+                    },
+                    fields: {
+                        first_name: {
+                            validators: {
+                                stringLength: {
+                                    min: 2,
+                                },
+                                notEmpty: {
+                                    message: 'Please supply your first name'
+                                }
+                            }
+                        },
+                        last_name: {
+                            validators: {
+                                stringLength: {
+                                    min: 2,
+                                },
+                                notEmpty: {
+                                    message: 'Please supply your last name'
+                                }
+                            }
+                        },
+                        email: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Please supply your email address'
+                                },
+                                emailAddress: {
+                                    message: 'Please supply a valid email address'
+                                }
+                            }
+                        },
+                        phone: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Please supply your phone number'
+                                },
+                                phone: {
+                                    country: 'US',
+                                    message: 'Please supply a vaild phone number with area code'
+                                }
+                            }
+                        },
+                        address: {
+                            validators: {
+                                stringLength: {
+                                    min: 8,
+                                },
+                                notEmpty: {
+                                    message: 'Please supply your street address'
+                                }
+                            }
+                        },
+                        city: {
+                            validators: {
+                                stringLength: {
+                                    min: 4,
+                                },
+                                notEmpty: {
+                                    message: 'Please supply your city'
+                                }
+                            }
+                        },
+                        state: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Please select your state'
+                                }
+                            }
+                        },
+                        zip: {
+                            validators: {
+                                notEmpty: {
+                                    message: 'Please supply your zip code'
+                                },
+                                zipCode: {
+                                    country: 'US',
+                                    message: 'Please supply a vaild zip code'
+                                }
+                            }
+                        },
+
+                    }
+                })
+                .on('success.form.bv', function(e) {
+                    $('#success_message').slideDown({
+                            opacity: "show"
+                        }, "slow") // Do something ...
+                    $('#contact_form').data('bootstrapValidator').resetForm();
+
+                    // Prevent form submission
+                    e.preventDefault();
+
+                    // Get the form instance
+                    var $form = $(e.target);
+
+                    // Get the BootstrapValidator instance
+                    var bv = $form.data('bootstrapValidator');
+
+                    // Use Ajax to submit form data
+                    $.post($form.attr('action'), $form.serialize(), function(result) {
+                        console.log(result);
+                    }, 'json');
+                });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form class="well form-horizontal" action="insertmaster.php" method="post" id="contact_form">
+            <fieldset>
+
+
+                <!-- Text input-->
+
+                <h3>Crear un nuevo usuario y contraseña para acceder al sistema</h3>
+                <hr>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Nombre de usuario</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="Nombre Usuario" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Contraseña</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="last_name" placeholder="Contraseña" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Por favor, escriba algunos datos sobre usted</h3>
+                <hr>
+
+                <!-- Text input-->
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Dirección de correo</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Correo de nuevo</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                            <input name="email" placeholder="E-Mail" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Nombre</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="Nombre" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Apellido(s)</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input name="first_name" placeholder="Apellidos" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Ciudad</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="city" placeholder="Ciudad" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label">País</label>
+                    <div class="col-md-4 selectContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                            <select name="state" class="form-control selectpicker">
+                                    <option value=" ">Seleccione su país</option>
+                                    <option>Afganistán</option>
+                                    <option>Albania</option>
+                                    <option>Alemania</option>
+                                    <option>Andorra</option>
+                                    <option>Angola</option>
+                                    <option>Anguila</option>
+                                    <option>Antártida</option>
+                                    <option>Antigua y Barbuda</option>
+                                    <option>Arabia Saudita</option>
+                                    <option> Argelia</option>
+                                    <option>Argentia</option>
+                                    <option>Armenia</option>
+                                    <option>Aruba</option>
+                                    <option>Australia</option>
+                                    <option>Austria</option>
+                                    <option>Azerbaiyán</option>
+                                    <option>Bahamas</option>
+                                    <option>Bahrein</option>
+                                    <option>Bangladesh</option>
+                                    <option>Barbados</option>
+                                    <option>Bélgica</option>
+                                    <option>Belice</option>
+                                    <option>Benín</option>
+                                    <option>Bermuda</option>
+                                    <option>Bielorrusia</option>
+                                    <option>Bolivia, Estado Plurinacional de</option>
+                                    <option>Bonaire, San Eustaquio y Saba</option>
+                                    <option>Bosnia y Herzegovina</option>
+                                    <option>Botswana</option>
+                                    <option>Brasil</option>
+                                    <option>Brunei Darussalam</option>
+                                    <option>Bulgaria</option>
+                                    <option>Burkina Faso</option>
+                                    <option>Burundi</option>
+                                    <option>Bután</option>
+                                    <option>Cabo Verde</option>
+                                    <option>Camboya</option>
+                                    <option>Camerún</option>
+                                    <option>Canadá</option>
+                                    <option>Chad</option>
+                                    <option>Chile</option>
+                                    <option>China</option>
+                                    <option>Chipre</option>
+                                    <option>Colombia</option>
+                                    <option>Comoras</option>
+                                    <option>Congo</option>
+                                    <option>Congo, República Democrática del</option>
+                                    <option>Corea del Norte</option>
+                                    <option>Corea del Sur</option>
+                                    <option>Costa de Marfil</option>
+                                    <option>Costa Rica</option>
+                                    <option>Croacia</option>
+                                    <option>Cuba</option>
+                                    <option>Curazao</option>
+                                    <option>Dinamarca</option>
+                                    <option>Djibouti</option>
+                                    <option>Dominica</option>
+                                    <option>Ecuador</option>
+                                    <option>Egipto</option>
+                                    <option>El Salvador</option>
+                                    <option>El Vaticano</option>
+                                    <option>Emiratos Árabes Unidos</option>
+                                    <option>Eritrea</option>
+                                    <option>Eslovaquia</option>
+                                    <option>Eslovenia</option>
+                                    <option>España</option>
+                                    <option>Estados Unidos</option>
+                                    <option>Estonia</option>
+                                    <option>Etiopía</option>
+                                    <option>Federación Rusa</option>
+                                    <option>Fiji</option>
+                                    <option>Filipinas</option>
+                                    <option>Finlandia</option>
+                                    <option>Francia</option>
+                                    <option>Gabón</option>
+                                    <option>Gambia</option>
+                                    <option>Georgia</option>
+                                    <option>Georgia del Sur e Islas Sandwich del Sur</option>
+                                    <option>Ghana</option>
+                                    <option>Gibraltar</option>
+                                    <option>Granada</option>
+                                    <option>Grecia</option>
+                                    <option>Groenlandia</option>
+                                    <option>Guadalupe</option>
+                                    <option>Guam</option>
+                                    <option>Guatemala</option>
+                                    <option>Guernsey</option>
+                                    <option>Guinea</option>
+                                    <option>Guinea Ecuatorial</option>
+                                    <option>Guinea-Bissau</option>
+                                    <option>Guyana</option>
+                                    <option>Guyana Francesa</option>
+                                    <option>Haití</option>
+                                    <option>Holanda</option>
+                                    <option>Honduras</option>
+                                    <option>Hong Kong</option>
+                                    <option>Hungría</option>
+                                    <option>India</option>
+                                    <option>Indonesia</option>
+                                    <option>Irak</option>
+                                    <option>Irán</option>
+                                    <option>Irlanda</option>
+                                    <option>Isla de Man</option>
+                                    <option>Islandia</option>
+                                    <option>Islas Áland</option>
+                                    <option>Islas Bouvet</option>
+                                    <option>Islas Caimán</option>
+                                    <option>Islas Cocos</option>
+                                    <option>Islas Cook</option>
+                                    <option>Islas de Navidad</option>
+                                    <option>Islas Faroe</option>
+                                    <option>Islas Heard y McDonald</option>
+                                    <option>Islas Malvinas</option>
+                                    <option>Islas Marianas del Norte</option>
+                                    <option>Islas MArshall</option>
+                                    <option>Islas Norfolk</option>
+                                    <option></option>
+                                    <option></option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Phone #</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                            <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Address</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="address" placeholder="Address" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text input-->
+
+
+
+                <!-- Select Basic -->
+
+
+
+                <!-- Text input-->
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label">Zip Code</label>
+                    <div class="col-md-4 inputGroupContainer">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input name="zip" placeholder="Zip Code" class="form-control" type="text">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Text area -->
+
+                <!-- Success message -->
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label"></label>
+                    <div class="col-md-4">
+                        <button type="submit" name="submit" class="btn btn-warning">Send <span
+                                class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+    </div>
+    <!-- /.container -->
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+
+</html>
