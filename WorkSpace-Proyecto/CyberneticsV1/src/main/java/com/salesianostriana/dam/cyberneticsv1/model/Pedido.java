@@ -34,6 +34,8 @@ public class Pedido {
 	
 	@OneToMany(mappedBy = "pedido")
 	private List<Alumno> alumno;
+	
+	
 	/**
 	 * @param fechaPedido Fecha que se realiza el pedido
 	 * @param total Precio total del pedido
@@ -41,6 +43,17 @@ public class Pedido {
 	public Pedido(LocalDate fechaPedido, double total) {
 		this.fechaPedido = fechaPedido;
 		this.total = total;
+	}
+	
+	
+	public void addAlumno(Alumno al) {
+		this.alumno.add(al);
+		al.setPedido(this);
+	}
+	
+	public void removeAlumno(Alumno al) {
+		this.alumno.remove(al);
+		al.setPedido(null);
 	}
 	
 	
