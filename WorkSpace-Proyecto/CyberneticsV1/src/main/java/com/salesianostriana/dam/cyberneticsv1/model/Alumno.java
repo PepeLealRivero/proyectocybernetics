@@ -17,14 +17,11 @@ import lombok.NoArgsConstructor;
  * @author jleal
  * @version 1.0
  * 
- * Esta clase es la entidad de Profesor
+ *          Esta clase es la entidad de Profesor
  */
-@Data @NoArgsConstructor
+@Data
+@NoArgsConstructor
 @Entity
-public class Alumno {
-	
-	
-	
-	
+public class Alumno extends Usuario {
 
 }
