@@ -6,9 +6,7 @@ package com.salesianostriana.dam.cyberneticsv1.model;
 import java.time.LocalDate;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,4 +22,30 @@ import lombok.NoArgsConstructor;
 @Entity
 public class Alumno extends Usuario {
 
+	@ManyToOne
+	private Pedido pedido;
+
+	/**
+	 * @param nomUser
+	 * @param pass
+	 * @param email
+	 * @param nombre
+	 * @param apellidos
+	 * @param fechaNac
+	 * @param ciudad
+	 * @param pais
+	 * @param dni
+	 * @param direccion
+	 * @param codigoPostal
+	 * @param telefono
+	 * @param pedido
+	 */
+	public Alumno(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
+			String ciudad, String pais, String dni, String direccion, int codigoPostal, float telefono, Pedido pedido) {
+		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
+		this.pedido = pedido;
+	}
+	
+	
+	
 }

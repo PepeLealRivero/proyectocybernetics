@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,9 @@ public class LineaPedido {
 	private long id;
 	
 	private double pvpUnitario;
+	
+	@ManyToOne
+	private Curso curso;
 
 	/**
 	 * @param pvpUnitario Precio Unitario de la linea de pedido
@@ -33,6 +37,20 @@ public class LineaPedido {
 	public LineaPedido(double pvpUnitario) {
 		this.pvpUnitario = pvpUnitario;
 	}
+
+	/**
+	 * @param id
+	 * @param pvpUnitario
+	 * @param curso
+	 */
+	public LineaPedido(double pvpUnitario, Curso curso) {
+		this.pvpUnitario = pvpUnitario;
+		this.curso = curso;
+	}
+	
+	
+	
+	
 	
 	
 
