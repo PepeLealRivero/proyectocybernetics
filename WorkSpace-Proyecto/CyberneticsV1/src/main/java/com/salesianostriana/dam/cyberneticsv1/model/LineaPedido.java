@@ -30,6 +30,9 @@ public class LineaPedido {
 	
 	@ManyToOne
 	private Curso curso;
+	
+	@ManyToOne
+	private Pedido pedido;
 
 	/**
 	 * @param pvpUnitario Precio Unitario de la linea de pedido

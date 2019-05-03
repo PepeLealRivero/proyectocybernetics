@@ -4,12 +4,17 @@
 package com.salesianostriana.dam.cyberneticsv1.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 import lombok.Data;
@@ -39,6 +44,24 @@ public class Curso {
 	@OneToMany(mappedBy = "curso")
 	private List<LineaPedido> lineaPedido;
 	
+	@ManyToOne
+	private Categoria categoria;
+	
+	
+	@ManyToMany
+	@JoinTable(
+		joinColumns = @JoinColumn(name="curso_id"),
+		inverseJoinColumns = @JoinColumn(name="profesor_id")
+	)
+	private List<Profesor> profesores = new ArrayList<>();
+	
+	@ManyToMany
+	@JoinTable(
+		joinColumns = @JoinColumn(name="curso_id"),
+		inverseJoinColumns = @JoinColumn(name="alumno_id")
+	)
+	private List<Alumno> alumnos = new ArrayList<>();
+	
 	/**
 	 * @param nombre Nombre del curso
 	 * @param fechaInicio Fecha de inicialización del curso
@@ -64,6 +87,26 @@ public class Curso {
 	public void removeLineaPedido(LineaPedido lin) {
 		this.lineaPedido.remove(lin);
 		lin.setCurso(null);
+	}
+	
+	public void addProfesor(Profesor p) {
+		profesores.add(p);
+		p.getCursos().add(this);
+	}
+	
+	public void deleteProfesor(Profesor p) {
+		profesores.remove(p);
+		p.getCursos().remove(this);
+	}
+	
+	public void addAlumno(Alumno a) {
+		alumnos.add(a);
+		a.getCursos().add(this);
+	}
+	
+	public void deleteAlumnos(Alumno a) {
+		alumnos.remove(a);
+		a.getCursos().remove(this);
 	}
 	
 	

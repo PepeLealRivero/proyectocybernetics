@@ -4,8 +4,11 @@
 package com.salesianostriana.dam.cyberneticsv1.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
 import lombok.Data;
@@ -24,6 +27,9 @@ public class Alumno extends Usuario {
 
 	@ManyToOne
 	private Pedido pedido;
+	
+	@ManyToMany(mappedBy="alumnos")
+	private List<Curso> cursos = new ArrayList<>();
 
 	/**
 	 * @param nomUser

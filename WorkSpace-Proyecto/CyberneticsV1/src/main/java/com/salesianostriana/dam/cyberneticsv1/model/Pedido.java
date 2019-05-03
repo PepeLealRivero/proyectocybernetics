@@ -35,6 +35,9 @@ public class Pedido {
 	@OneToMany(mappedBy = "pedido")
 	private List<Alumno> alumno;
 	
+	@OneToMany(mappedBy = "pedido")
+	private List<LineaPedido> lineaPedidos;
+	
 	
 	/**
 	 * @param fechaPedido Fecha que se realiza el pedido
@@ -56,6 +59,15 @@ public class Pedido {
 		al.setPedido(null);
 	}
 	
+	public void addLineaPedido(LineaPedido lin) {
+		this.lineaPedidos.add(lin);
+		lin.setPedido(this);
+	}
+	
+	public void removeLineaPedido(LineaPedido lin) {
+		this.lineaPedidos.remove(lin);
+		lin.setPedido(null);
+	}
 	
 
 }

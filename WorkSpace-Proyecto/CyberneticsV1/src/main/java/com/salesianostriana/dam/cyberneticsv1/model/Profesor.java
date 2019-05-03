@@ -4,11 +4,11 @@
 package com.salesianostriana.dam.cyberneticsv1.model;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +23,9 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor
 @Entity
 public class Profesor extends Usuario{
+	
+	@ManyToMany(mappedBy="profesores")
+	private List<Curso> cursos = new ArrayList<>();
 	
 
 	private boolean isAdmin;
@@ -47,6 +50,8 @@ public class Profesor extends Usuario{
 		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
 		this.isAdmin = isAdmin;
 	}
+	
+	
 
 	
 	
