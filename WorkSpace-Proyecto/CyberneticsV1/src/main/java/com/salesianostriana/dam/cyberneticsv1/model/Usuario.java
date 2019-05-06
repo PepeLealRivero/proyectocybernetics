@@ -5,10 +5,10 @@ package com.salesianostriana.dam.cyberneticsv1.model;
 
 import java.time.LocalDate;
 
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@Entity
+@MappedSuperclass
 public class Usuario {
 
 	@Id

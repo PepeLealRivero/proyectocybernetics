@@ -10,8 +10,11 @@ import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author jleal
@@ -20,8 +23,10 @@ import lombok.NoArgsConstructor;
  * Esta clase es la entidad de Profesor
  *
  */
-@Data @NoArgsConstructor
-@Entity
+@Getter @Setter 
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true) @NoArgsConstructor
+@Entity(name = "Profesor")
 public class Profesor extends Usuario{
 	
 	@ManyToMany(mappedBy="profesores")

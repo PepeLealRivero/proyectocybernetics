@@ -11,8 +11,11 @@ import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 /**
  * @author jleal
@@ -20,9 +23,11 @@ import lombok.NoArgsConstructor;
  * 
  *          Esta clase es la entidad de Profesor
  */
-@Data
+@Getter @Setter 
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 @NoArgsConstructor
-@Entity
+@Entity(name = "Alumno")
 public class Alumno extends Usuario {
 
 	@ManyToOne
