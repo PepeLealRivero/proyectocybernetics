@@ -2,437 +2,464 @@
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Registro</title>
-    <script type="text/javascript"></script>
+<meta charset="UTF-8">
+<title>Registro</title>
+<script type="text/javascript"></script>
 
 
 
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
-    <link rel='stylesheet prefetch' href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css'>
+<link rel='stylesheet prefetch'
+	href='http://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
 
 
 
 </head>
 
 <body>
-    <div class="container">
+	<div class="container">
 
-        <form class="well form-horizontal" th:action="addAlumno" method="POST" id="contact_form" th:object="${registroForm}">
-            <fieldset>
+		<form class="well form-horizontal" th:action="addAlumno" method="POST"
+			id="contact_form" th:object="${registroForm}">
+			<fieldset>
 
-                <h3>Crear un nuevo usuario y contraseña para acceder al sistema</h3>
-                <hr>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Nombre de usuario</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="first_name" placeholder="Nombre Usuario" class="form-control" type="text" th:field="*{nomUser}">
-                        </div>
-                    </div>
-                </div>
+				<h3>Crear un nuevo usuario y contraseña para acceder al sistema</h3>
+				<hr>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Nombre de usuario</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
+								placeholder="Nombre Usuario" class="form-control" type="text"
+								th:field="*{nomUser}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Contraseña</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="last_name" placeholder="Contraseña" class="form-control" type="text" th:field="*{pass}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Contraseña</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input name="last_name"
+								placeholder="Contraseña" class="form-control" type="text"
+								th:field="*{pass}">
+						</div>
+					</div>
+				</div>
 
-                <h3>Por favor, escriba algunos datos sobre usted</h3>
-                <hr>
+				<h3>Por favor, escriba algunos datos sobre usted</h3>
+				<hr>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Dirección de correo</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input name="email" placeholder="E-Mail" class="form-control" type="text" th:field="*{email}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Dirección de correo</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-envelope"></i></span> <input name="email"
+								placeholder="E-Mail" class="form-control" type="text"
+								th:field="*{email}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Correo de nuevo</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input name="email" placeholder="E-Mail" class="form-control" type="text" th:field="*{email}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Correo de nuevo</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-envelope"></i></span> <input name="email"
+								placeholder="E-Mail" class="form-control" type="text"
+								th:field="*{email}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Nombre</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="first_name" placeholder="Nombre" class="form-control" type="text" th:field="*{nombre}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Nombre</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
+								placeholder="Nombre" class="form-control" type="text"
+								th:field="*{nombre}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Apellido(s)</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="first_name" placeholder="Apellidos" class="form-control" type="text" th:field="*{apellidos}">
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Fecha de Nacimiento</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input type="date" name="fecha" min="1900-01-01"
-                                  max="2050-01-01" step="2" th:field="*{fechaNac}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Apellido(s)</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
+								placeholder="Apellidos" class="form-control" type="text"
+								th:field="*{apellidos}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Ciudad</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                            <input name="city" placeholder="Ciudad" class="form-control" type="text" th:field="*{ciudad}">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Fecha de Nacimiento</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input type="date"
+								name="fecha" min="1900-01-01" max="2050-01-01" step="2"
+								th:field="*{fechaNac}">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
+				<div class="form-group">
+					<label class="col-md-2 control-label">Ciudad</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-home"></i></span> <input name="city"
+								placeholder="Ciudad" class="form-control" type="text"
+								th:field="*{ciudad}">
+						</div>
+					</div>
+				</div>
+			                <div class="form-group">
                     <label class="col-md-2 control-label">País</label>
                     <div class="col-md-4 selectContainer">
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
                             <select name="state" class="form-control selectpicker" th:field="*{pais}">
-                                    <option th:value="S" th:text="Select">Seleccione su país</option>
-                                    <option th:value="A" th:text="Afganistan">Afganistán</option>
-                                    <option th:value="A" th:text="Albania">Albania</option>
-                                    <option th:value="A" th:text="Alemania">Alemania</option>
-                                    <option th:value="A" th:text="Andorra">Andorra</option>
-                                    <option th:value="A" th:text="Angola">Angola</option>
-                                    <option th:value="A" th:text="Anguila">Anguila</option>
-                                    <option th:value="A" th:text="Antartida">Antártida</option>
-                                    <option th:value="A" th:text="Antigua">Antigua y Barbuda</option>
-                                    <option th:value="A" th:text="Arabia">Arabia Saudita</option>
-                                    <option th:value="A" th:text="Argelia"> Argelia</option>
-                                    <option th:value="A" th:text="Argentina">Argentia</option>
-                                    <option th:value="A" th:text="Armenia">Armenia</option>
-                                    <option th:value="A" th:text="Aruba">Aruba</option>
-                                    <option th:value="A" th:text="Australia">Australia</option>
-                                    <option th:value="A" th:text="Austria">Austria</option>
-                                    <option th:value="A" th:text="Azerbayan">Azerbaiyán</option>
-                                    <option th:value="B" th:text="Bahamas">Bahamas</option>
-                                    <option th:value="B" th:text="Bahrein">Bahrein</option>
-                                    <option th:value="B" th:text="Bangladesh">Bangladesh</option>
-                                    <option th:value="B" th:text="Barbados">Barbados</option>
-                                    <option th:value="B" th:text="Belgica">Bélgica</option>
-                                    <option th:value="B" th:text="Belice">Belice</option>
-                                    <option th:value="B" th:text="Benin">Benín</option>
-                                    <option th:value="B" th:text="Bermuda">Bermuda</option>
-                                    <option th:value="B" th:text="Bielorrudia">Bielorrusia</option>
-                                    <option th:value="B" th:text="Bolivia">Bolivia, Estado Plurinacional de</option>
-                                    <option th:value="B" th:text="B">Bonaire, San Eustaquio y Saba</option>
-                                    <option th:value="B" th:text="B">Bosnia y Herzegovina</option>
-                                    <option th:value="B" th:text="B">Botswana</option>
-                                    <option th:value="B" th:text="B">Brasil</option>
-                                    <option th:value="B" th:text="B">Brunei Darussalam</option>
-                                    <option th:value="B" th:text="B">Bulgaria</option>
-                                    <option th:value="B" th:text="B">Burkina Faso</option>
-                                    <option th:value="B" th:text="B">Burundi</option>
-                                    <option th:value="B" th:text="B">Bután</option>
-                                    <option th:value="" th:text="">Cabo Verde</option>
-                                    <option th:value="" th:text="">Camboya</option>
-                                    <option th:value="" th:text="">Camerún</option>
-                                    <option th:value="" th:text="">Canadá</option>
-                                    <option th:value="" th:text="">Chad</option>
-                                    <option th:value="" th:text="">Chile</option>
-                                    <option th:value="" th:text="">China</option>
-                                    <option th:value="" th:text="">Chipre</option>
-                                    <option th:value="" th:text="">Colombia</option>
-                                    <option th:value="" th:text="">Comoras</option>
-                                    <option th:value="" th:text="">Congo</option>
-                                    <option th:value="" th:text="">Congo, República Democrática del</option>
-                                    <option th:value="" th:text="">Corea del Norte</option>
-                                    <option th:value="" th:text="">Corea del Sur</option>
-                                    <option th:value="" th:text="">Costa de Marfil</option>
-                                    <option th:value="" th:text="">Costa Rica</option>
-                                    <option th:value="" th:text="">Croacia</option>
-                                    <option th:value="" th:text="">Cuba</option>
-                                    <option th:value="" th:text="">Curazao</option>
-                                    <option th:value="" th:text="">Dinamarca</option>
-                                    <option th:value="" th:text="">Djibouti</option>
-                                    <option th:value="" th:text="">Dominica</option>
-                                    <option th:value="" th:text="">Ecuador</option>
-                                    <option th:value="" th:text="">Egipto</option>
-                                    <option th:value="" th:text="">El Salvador</option>
-                                    <option th:value="" th:text="">El Vaticano</option>
-                                    <option th:value="" th:text="">Emiratos Árabes Unidos</option>
-                                    <option th:value="" th:text="">Eritrea</option>
-                                    <option th:value="" th:text="">Eslovaquia</option>
-                                    <option th:value="" th:text="">Eslovenia</option>
-                                    <option th:value="" th:text="">España</option>
-                                    <option th:value="" th:text="">Estados Unidos</option>
-                                    <option th:value="" th:text="">Estonia</option>
-                                    <option th:value="" th:text="">Etiopía</option>
-                                    <option th:value="" th:text="">Federación Rusa</option>
-                                    <option th:value="" th:text="">Fiji</option>
-                                    <option th:value="" th:text="">Filipinas</option>
-                                    <option th:value="" th:text="">Finlandia</option>
-                                    <option th:value="" th:text="">Francia</option>
-                                    <option th:value="" th:text="">Gabón</option>
-                                    <option th:value="" th:text="">Gambia</option>
-                                    <option th:value="" th:text="">Georgia</option>
-                                    <option th:value="" th:text="">Georgia del Sur e Islas Sandwich del Sur</option>
-                                    <option th:value="" th:text="">Ghana</option>
-                                    <option th:value="" th:text="">Gibraltar</option>
-                                    <option th:value="" th:text="">Granada</option>
-                                    <option th:value="" th:text="">Grecia</option>
-                                    <option th:value="" th:text="">Groenlandia</option>
-                                    <option th:value="" th:text="">Guadalupe</option>
-                                    <option th:value="" th:text="">Guam</option>
-                                    <option th:value="" th:text="">Guatemala</option>
-                                    <option th:value="" th:text="">Guernsey</option>
-                                    <option th:value="" th:text="">Guinea</option>
-                                    <option th:value="" th:text="">Guinea Ecuatorial</option>
-                                    <option th:value="" th:text="">Guinea-Bissau</option>
-                                    <option th:value="" th:text="">Guyana</option>
-                                    <option th:value="" th:text="">Guyana Francesa</option>
-                                    <option th:value="" th:text="">Haití</option>
-                                    <option th:value="" th:text="">Holanda</option>
-                                    <option th:value="" th:text="">Honduras</option>
-                                    <option th:value="" th:text="">Hong Kong</option>
-                                    <option th:value="" th:text="">Hungría</option>
-                                    <option th:value="" th:text="">India</option>
-                                    <option th:value="" th:text="">Indonesia</option>
-                                    <option th:value="" th:text="">Irak</option>
-                                    <option th:value="" th:text="">Irán</option>
-                                    <option th:value="" th:text="">Irlanda</option>
-                                    <option th:value="" th:text="">Isla de Man</option>
-                                    <option th:value="" th:text="">Islandia</option>
-                                    <option th:value="" th:text="">Islas Áland</option>
-                                    <option th:value="" th:text="">Islas Bouvet</option>
-                                    <option th:value="" th:text="">Islas Caimán</option>
-                                    <option th:value="" th:text="">Islas Cocos</option>
-                                    <option th:value="" th:text="">Islas Cook</option>
-                                    <option th:value="" th:text="">Islas de Navidad</option>
-                                    <option th:value="" th:text="">Islas Faroe</option>
-                                    <option th:value="" th:text="">Islas Heard y McDonald</option>
-                                    <option th:value="" th:text="">Islas Malvinas</option>
-                                    <option th:value="" th:text="">Islas Marianas del Norte</option>
-                                    <option th:value="" th:text="">Islas MArshall</option>
-                                    <option th:value="" th:text="">Islas Norfolk</option>
-                                    <option th:value="" th:text="">Islas Salomón</option>
-                                    <option th:value="" th:text="">Islas Svalbard y Jan Mayen</option>
-                                    <option th:value="" th:text="">Islas Turcas y Caicos</option>
-                                    <option th:value="" th:text="">Islas Vírgenes (Americanas)</option>
-                                    <option th:value="" th:text="">Islas Vírgenes (Británicas)</option>
-                                    <option th:value="" th:text="">Islas Wallis y Futuna</option>
-                                    <option th:value="" th:text="">Israel</option>
-                                    <option th:value="" th:text="">Italia</option>
-                                    <option th:value="" th:text="">Jamaica</option>
-                                    <option th:value="" th:text="">Japón</option>
-                                    <option th:value="" th:text="">Jersey</option>
-                                    <option th:value="" th:text="">Jordania</option>
-                                    <option th:value="" th:text="">Kazajstán</option>
-                                    <option th:value="" th:text="">Kenia</option>
-                                    <option th:value="" th:text="">Kirguistán</option>
-                                    <option th:value="" th:text="">Kiribati</option>
-                                    <option th:value="" th:text="">Kuwait</option>
-                                    <option th:value="" th:text="">Laos</option>
-                                    <option th:value="" th:text="">Latvia</option>
-                                    <option th:value="" th:text="">Lesotho</option>
-                                    <option th:value="" th:text="">Líbano</option>
-                                    <option th:value="" th:text="">Liberia</option>
-                                    <option th:value="" th:text="">Libia</option>
-                                    <option th:value="" th:text="">Liechtenstein</option>
-                                    <option th:value="" th:text="">Lituania</option>
-                                    <option th:value="" th:text="">Luxemburgo</option>
-                                    <option th:value="" th:text="">Macao</option>
-                                    <option th:value="" th:text="">Macedonia</option>
-                                    <option th:value="" th:text="">Madagascar</option>
-                                    <option th:value="" th:text="">Malasia</option>
-                                    <option th:value="" th:text="">Malawi</option>
-                                    <option th:value="" th:text="">Maldivas</option>
-                                    <option th:value="" th:text="">Mali</option>
-                                    <option th:value="" th:text="">Malta</option>
-                                    <option th:value="" th:text="">Marruecos</option>
-                                    <option th:value="" th:text="">Martinica</option>
-                                    <option th:value="" th:text="">Mauricio</option>
-                                    <option th:value="" th:text="">Mauritania</option>
-                                    <option th:value="" th:text="">Mayotte</option>
-                                    <option th:value="" th:text="">México</option>
-                                    <option th:value="" th:text="">Micronesia</option>
-                                    <option th:value="" th:text="">Moldovia</option>
-                                    <option th:value="" th:text="">Mónaco</option>
-                                    <option th:value="" th:text="">Mongolia</option>
-                                    <option th:value="" th:text="">Montenegro</option>
-                                    <option th:value="" th:text="">Montserrat</option>
-                                    <option th:value="" th:text="">Mozambique</option>
-                                    <option th:value="" th:text="">Myanmar</option>
-                                    <option th:value="" th:text="">Namibia</option>
-                                    <option th:value="" th:text="">Naurú</option>
-                                    <option th:value="" th:text="">Nepal</option>
-                                    <option th:value="" th:text="">Nicaragua</option>
-                                    <option th:value="" th:text="">Níger</option>
-                                    <option th:value="" th:text="">Nigeria</option>
-                                    <option th:value="" th:text="">Niue</option>
-                                    <option th:value="" th:text="">Noruega</option>
-                                    <option th:value="" th:text="">Nueva Caledonia</option>
-                                    <option th:value="" th:text="">Nueva Zelandia</option>
-                                    <option th:value="" th:text="">Omán</option>
-                                    <option th:value="" th:text="">Pakistán</option>
-                                    <option th:value="" th:text="">Palau</option>
-                                    <option th:value="" th:text="">Palestina, Estado de</option>
-                                    <option th:value="" th:text="">Panamá</option>
-                                    <option th:value="" th:text="">Papúa Nueva Guinea</option>
-                                    <option th:value="" th:text="">Paraguay</option>
-                                    <option th:value="" th:text="">Perú</option>
-                                    <option th:value="" th:text="">Pitcairn</option>
-                                    <option th:value="" th:text="">Polinesia Francesa</option>
-                                    <option th:value="" th:text="">Polonia</option>
-                                    <option th:value="" th:text="">Portugal</option>
-                                    <option th:value="" th:text="">Puerto Rico</option>
-                                    <option th:value="" th:text="">Qatar</option>
-                                    <option th:value="" th:text="">Reino Unido</option>
-                                    <option th:value="" th:text="">República Centroafricana</option>
-                                    <option th:value="" th:text="">República Checa</option>
-                                    <option th:value="" th:text="">República Dominicana</option>
-                                    <option th:value="" th:text="">Reunión</option>
-                                    <option th:value="" th:text="">Ruanda</option>
-                                    <option th:value="" th:text="">Rumanía</option>
-                                    <option th:value="" th:text="">Sahara Occidental</option>
-                                    <option th:value="" th:text="">Saint Barthélemy</option>
-                                    <option th:value="" th:text="">Samoa</option>
-                                    <option th:value="" th:text="">Samoa Americana</option>
-                                    <option th:value="" th:text="">San Cristóbal Nevis</option>
-                                    <option th:value="" th:text="">San Marino</option>
-                                    <option th:value="" th:text="">San Martín (parte holandesa)</option>
-                                    <option th:value="" th:text="">San Martín (zona Francesa)</option>
-                                    <option th:value="" th:text="">San Vicente y Las Granadinas</option>
-                                    <option th:value="" th:text="">Santa Elena, Ascensión y Tristán de Acuña</option>
-                                    <option th:value="" th:text="">Santa Lucía</option>
-                                    <option th:value="" th:text="">Santo Tomé y Príncipe</option>
-                                    <option th:value="" th:text="">Senegal</option>
-                                    <option th:value="" th:text="">Serbia</option>
-                                    <option th:value="" th:text="">Seychelles</option>
-                                    <option th:value="" th:text="">Sierra Leona</option>
-                                    <option th:value="" th:text="">Singapur</option>
-                                    <option th:value="" th:text="">Siria</option>
-                                    <option th:value="" th:text="">Somalia</option>
-                                    <option th:value="" th:text="">Sri Lanka</option>
-                                    <option th:value="" th:text="">Sudáfrica</option>
-                                    <option th:value="" th:text="">Sudán</option>
-                                    <option th:value="" th:text="">Sudán del Sur</option>
-                                    <option th:value="" th:text="">Suecia</option>
-                                    <option th:value="" th:text="">Suiza</option>
-                                    <option th:value="" th:text="">Surinam</option>
-                                    <option th:value="" th:text="">Swazilandia</option>
-                                    <option th:value="" th:text="">Tailandia</option>
-                                    <option th:value="" th:text="">Taiwán</option>
-                                    <option th:value="" th:text="">Tanzania</option>
-                                    <option th:value="" th:text="">Tayikistán</option>
-                                    <option th:value="" th:text="">Territorio Británico del Océano Índico</option>
-                                    <option th:value="" th:text="">Territorios Franceses del Sur</option>
-                                    <option th:value="" th:text="">Timor-Leste</option>
-                                    <option th:value="" th:text="">Togo</option>
-                                    <option th:value="" th:text="">Tokelau</option>
-                                    <option th:value="" th:text="">Tonga</option>
-                                    <option th:value="" th:text="">Trinidad y Tobago</option>
-                                    <option th:value="" th:text="">Túnez</option>
-                                    <option th:value="" th:text="">Turkmenistán</option>
-                                    <option th:value="" th:text="">Turquía</option>
-                                    <option th:value="" th:text="">Tuvalu</option>
-                                    <option th:value="" th:text="">Ucrania</option>
-                                    <option th:value="" th:text="">Uganda</option>
-                                    <option th:value="" th:text="">United States Minor Outlying Islands</option>
-                                    <option th:value="" th:text="">Uruguay</option>
-                                    <option th:value="" th:text="">Uzbekistán</option>
-                                    <option th:value="" th:text="">Vanuatu</option>
-                                    <option th:value="" th:text="">Venezuela, República Bolivariana de</option>
-                                    <option th:value="" th:text="">Vietnam</option>
-                                    <option th:value="" th:text="">Yemen</option>
-                                    <option th:value="" th:text="">Zambia</option>
-                                    <option th:value="" th:text="">Zimbawe</option>
+                                    <option th:value="0" th:text="Select">Seleccione su país</option>
+                                    <option th:value="1" th:text="Afganistan">Afganistán</option>
+                                    <option th:value="2" th:text="Albania">Albania</option>
+                                    <option th:value="3" th:text="Alemania">Alemania</option>
+                                    <option th:value="4" th:text="Andorra">Andorra</option>
+                                    <option th:value="5" th:text="Angola">Angola</option>
+                                    <option th:value="6" th:text="Anguila">Anguila</option>
+                                    <option th:value="7" th:text="Antartida">Antártida</option>
+                                    <option th:value="8" th:text="Antigua">Antigua y Barbuda</option>
+                                    <option th:value="9" th:text="Arabia">Arabia Saudita</option>
+                                    <option th:value="10" th:text="Argelia"> Argelia</option>
+                                    <option th:value="11" th:text="Argentina">Argentia</option>
+                                    <option th:value="12" th:text="Armenia">Armenia</option>
+                                    <option th:value="13" th:text="Aruba">Aruba</option>
+                                    <option th:value="14" th:text="Australia">Australia</option>
+                                    <option th:value="15" th:text="Austria">Austria</option>
+                                    <option th:value="16" th:text="Azerbayan">Azerbaiyán</option>
+                                    <option th:value="17" th:text="Bahamas">Bahamas</option>
+                                    <option th:value="18" th:text="Bahrein">Bahrein</option>
+                                    <option th:value="19" th:text="Bangladesh">Bangladesh</option>
+                                    <option th:value="20" th:text="Barbados">Barbados</option>
+                                    <option th:value="21" th:text="Belgica">Bélgica</option>
+                                    <option th:value="22" th:text="Belice">Belice</option>
+                                    <option th:value="23" th:text="Benin">Benín</option>
+                                    <option th:value="24" th:text="Bermuda">Bermuda</option>
+                                    <option th:value="25" th:text="Bielorrudia">Bielorrusia</option>
+                                    <option th:value="26" th:text="Bolivia">Bolivia, Estado Plurinacional de</option>
+                                   
+                                   <option th:value="27" text="BonaireSanEustaquioySaba">Bonaire, San Eustaquio y Saba</option>
+                                   <!-- <option th:value="28" th:text="BosniayHerzegovina">Bosnia y Herzegovina</option>
+                                    <option th:value="29" th:text="Botswana">Botswana</option>
+                                    <option th:value="30" th:text="Brasil">Brasil</option>
+                                    <option th:value="31" th:text="Brunei Darussalam">Brunei Darussalam</option>
+                                    <option th:value="32" th:text="Bulgaria">Bulgaria</option>
+                                    <option th:value="33" th:text="Burkina Faso">Burkina Faso</option>
+                                    <option th:value="34" th:text="Burundi">Burundi</option>
+                                    <option th:value="35" th:text="Bután">Bután</option>
+                                    <option th:value="36" th:text="Cabo Verde">Cabo Verde</option>
+                                    <option th:value="37" th:text="Camboya">Camboya</option>
+                                    <option th:value="38" th:text="Camerún">Camerún</option>
+                                    <option th:value="39" th:text="Canadá">Canadá</option>
+                                    <option th:value="40" th:text="Chad">Chad</option>
+                                    <option th:value="41" th:text="Chile">Chile</option>
+                                    <option th:value="42" th:text="China">China</option>
+                                    <option th:value="43" th:text="Chipre">Chipre</option>
+                                    <option th:value="44" th:text="Colombia">Colombia</option>
+                                    <option th:value="45" th:text="Comoras">Comoras</option>
+                                    <option th:value="46" th:text="Congo">Congo</option>
+                                    <option th:value="47" th:text="Congo, República Democrática del">Congo, República Democrática del</option>
+                                    <option th:value="48" th:text="Corea del Norte">Corea del Norte</option>
+                                    <option th:value="49" th:text="Corea del Sur">Corea del Sur</option>
+                                    <option th:value="50" th:text="Costa de Marfil">Costa de Marfil</option>
+                                    <option th:value="51" th:text="Costa Rica">Costa Rica</option>
+                                    <option th:value="52" th:text="Croacia">Croacia</option>
+                                    <option th:value="53" th:text="Cuba">Cuba</option>
+                                    <option th:value="54" th:text="Curazao">Curazao</option>
+                                    <option th:value="55" th:text="Dinamarca">Dinamarca</option>
+                                    <option th:value="56" th:text="Djibouti">Djibouti</option>
+                                    <option th:value="57" th:text="Dominica">Dominica</option>
+                                    <option th:value="58" th:text="Ecuador">Ecuador</option>
+                                    <option th:value="59" th:text="Egipto">Egipto</option>
+                                    <option th:value="60" th:text="El Salvador">El Salvador</option>
+                                    <option th:value="61" th:text="El Vaticano">El Vaticano</option>
+                                    <option th:value="62" th:text="Emiratos Árabes Unidos">Emiratos Árabes Unidos</option>
+                                    <option th:value="63" th:text="Eritrea">Eritrea</option>
+                                    <option th:value="64" th:text="Eslovaquia">Eslovaquia</option>
+                                    <option th:value="65" th:text="Eslovenia">Eslovenia</option>
+                                    <option th:value="66" th:text="España">España</option>
+                                    <option th:value="67" th:text="Estados Unidos">Estados Unidos</option>
+                                    <option th:value="68" th:text="Estonia">Estonia</option>
+                                    <option th:value="69" th:text="Etiopía">Etiopía</option>
+                                    <option th:value="70" th:text="Federación Rusa">Federación Rusa</option>
+                                    <option th:value="71" th:text="Fiji">Fiji</option>
+                                    <option th:value="72" th:text="Filipinas">Filipinas</option>
+                                    <option th:value="73" th:text="Finlandia">Finlandia</option>
+                                    <option th:value="74" th:text="Francia">Francia</option>
+                                    <option th:value="75" th:text="Gabón">Gabón</option>
+                                    <option th:value="76" th:text="Gambia">Gambia</option>
+                                    <option th:value="77" th:text="Georgia">Georgia</option>
+                                    <option th:value="78" th:text="Georgia del Sur e Islas Sandwich del Sur">Georgia del Sur e Islas Sandwich del Sur</option>
+                                    <option th:value="79" th:text="Ghana">Ghana</option>
+                                    <option th:value="80" th:text="Gibraltar">Gibraltar</option>
+                                    <option th:value="81" th:text="Granada">Granada</option>
+                                    <option th:value="82" th:text="Grecia">Grecia</option>
+                                    <option th:value="83" th:text="Groenlandia">Groenlandia</option>
+                                    <option th:value="84" th:text="Guadalupe">Guadalupe</option>
+                                    <option th:value="85" th:text="Guam">Guam</option>
+                                    <option th:value="86" th:text="Guatemala">Guatemala</option>
+                                    <option th:value="87" th:text="Guernsey">Guernsey</option>
+                                    <option th:value="88" th:text="Guinea">Guinea</option>
+                                    <option th:value="89" th:text="Guinea Ecuatorial">Guinea Ecuatorial</option>
+                                    <option th:value="90" th:text="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option th:value="91" th:text="Guyana">Guyana</option>
+                                    <option th:value="92" th:text="Guyana Francesa">Guyana Francesa</option>
+                                    <option th:value="93" th:text="Haití">Haití</option>
+                                    <option th:value="94" th:text="Holanda">Holanda</option>
+                                    <option th:value="95" th:text="Honduras">Honduras</option>
+                                    <option th:value="96" th:text="Hong Kong">Hong Kong</option>
+                                    <option th:value="97" th:text="Hungría">Hungría</option>
+                                    <option th:value="98" th:text="India">India</option>
+                                    <option th:value="99" th:text="Indonesia">Indonesia</option>
+                                    <option th:value="100" th:text="Irak">Irak</option>
+                                    <option th:value="101" th:text="Irán">Irán</option>
+                                    <option th:value="102" th:text="Irlanda">Irlanda</option>
+                                    <option th:value="103" th:text="Isla de Man">Isla de Man</option>
+                                    <option th:value="104" th:text="Islandia">Islandia</option>
+                                    <option th:value="105" th:text="Islas Áland">Islas Áland</option>
+                                    <option th:value="106" th:text="Islas Bouvet">Islas Bouvet</option>
+                                    <option th:value="107" th:text="Islas Caimán">Islas Caimán</option>
+                                    <option th:value="108" th:text="Islas Cocos">Islas Cocos</option>
+                                    <option th:value="109" th:text="Islas Cook">Islas Cook</option>
+                                    <option th:value="110" th:text="Islas de Navidad">Islas de Navidad</option>
+                                    <option th:value="111" th:text="Islas Faroe">Islas Faroe</option>
+                                    <option th:value="112" th:text="Islas Heard y McDonald">Islas Heard y McDonald</option>
+                                    <option th:value="113" th:text="Islas Malvinas">Islas Malvinas</option>
+                                    <option th:value="114" th:text="Islas Marianas del Norte">Islas Marianas del Norte</option>
+                                    <option th:value="115" th:text="Islas MArshall">Islas MArshall</option>
+                                    <option th:value="116" th:text="Islas Norfolk">Islas Norfolk</option>
+                                    <option th:value="117" th:text="Islas Salomón">Islas Salomón</option>
+                                    <option th:value="118" th:text="Islas Svalbard y Jan Mayen">Islas Svalbard y Jan Mayen</option>
+                                    <option th:value="119" th:text="Islas Turcas y Caicos">Islas Turcas y Caicos</option>
+                                    <option th:value="120" th:text="Islas Vírgenes (Americanas)">Islas Vírgenes (Americanas)</option>
+                                    <option th:value="121" th:text="Islas Vírgenes (Británicas)">Islas Vírgenes (Británicas)</option>
+                                    <option th:value="122" th:text="Islas Wallis y Futuna">Islas Wallis y Futuna</option>
+                                    <option th:value="123" th:text="Israel">Israel</option>
+                                    <option th:value="124" th:text="Italia">Italia</option>
+                                    <option th:value="125" th:text="Jamaica">Jamaica</option>
+                                    <option th:value="126" th:text="Japón">Japón</option>
+                                    <option th:value="127" th:text="Jersey">Jersey</option>
+                                    <option th:value="128" th:text="Jordania">Jordania</option>
+                                    <option th:value="129" th:text="Kazajstán">Kazajstán</option>
+                                    <option th:value="130" th:text="">Kenia</option>
+                                    <option th:value="131" th:text="">Kirguistán</option>
+                                    <option th:value="132" th:text="">Kiribati</option>
+                                    <option th:value="133" th:text="">Kuwait</option>
+                                    <option th:value="134" th:text="">Laos</option>
+                                    <option th:value="135" th:text="">Latvia</option>
+                                    <option th:value="136" th:text="">Lesotho</option>
+                                    <option th:value="137" th:text="">Líbano</option>
+                                    <option th:value="138" th:text="">Liberia</option>
+                                    <option th:value="139" th:text="">Libia</option>
+                                    <option th:value="140" th:text="">Liechtenstein</option>
+                                    <option th:value="141" th:text="">Lituania</option>
+                                    <option th:value="142" th:text="">Luxemburgo</option>
+                                    <option th:value="143" th:text="">Macao</option>
+                                    <option th:value="144" th:text="">Macedonia</option>
+                                    <option th:value="145" th:text="">Madagascar</option>
+                                    <option th:value="146" th:text="">Malasia</option>
+                                    <option th:value="147" th:text="">Malawi</option>
+                                    <option th:value="148" th:text="">Maldivas</option>
+                                    <option th:value="149" th:text="">Mali</option>
+                                    <option th:value="150" th:text="">Malta</option>
+                                    <option th:value="151" th:text="">Marruecos</option>
+                                    <option th:value="152" th:text="">Martinica</option>
+                                    <option th:value="153" th:text="">Mauricio</option>
+                                    <option th:value="154" th:text="">Mauritania</option>
+                                    <option th:value="155" th:text="">Mayotte</option>
+                                    <option th:value="156" th:text="">México</option>
+                                    <option th:value="157" th:text="">Micronesia</option>
+                                    <option th:value="158" th:text="">Moldovia</option>
+                                    <option th:value="159" th:text="">Mónaco</option>
+                                    <option th:value="160" th:text="">Mongolia</option>
+                                    <option th:value="161" th:text="">Montenegro</option>
+                                    <option th:value="162" th:text="">Montserrat</option>
+                                    <option th:value="163" th:text="">Mozambique</option>
+                                    <option th:value="164" th:text="">Myanmar</option>
+                                    <option th:value="165" th:text="">Namibia</option>
+                                    <option th:value="166" th:text="">Naurú</option>
+                                    <option th:value="167" th:text="">Nepal</option>
+                                    <option th:value="168" th:text="">Nicaragua</option>
+                                    <option th:value="169" th:text="">Níger</option>
+                                    <option th:value="170" th:text="">Nigeria</option>
+                                    <option th:value="171" th:text="">Niue</option>
+                                    <option th:value="172" th:text="">Noruega</option>
+                                    <option th:value="173" th:text="">Nueva Caledonia</option>
+                                    <option th:value="174" th:text="">Nueva Zelandia</option>
+                                    <option th:value="175" th:text="">Omán</option>
+                                    <option th:value="176" th:text="">Pakistán</option>
+                                    <option th:value="177" th:text="">Palau</option>
+                                    <option th:value="178" th:text="">Palestina, Estado de</option>
+                                    <option th:value="179" th:text="">Panamá</option>
+                                    <option th:value="180" th:text="">Papúa Nueva Guinea</option>
+                                    <option th:value="181" th:text="">Paraguay</option>
+                                    <option th:value="182" th:text="">Perú</option>
+                                    <option th:value="183" th:text="">Pitcairn</option>
+                                    <option th:value="184" th:text="">Polinesia Francesa</option>
+                                    <option th:value="185" th:text="">Polonia</option>
+                                    <option th:value="186" th:text="">Portugal</option>
+                                    <option th:value="187" th:text="">Puerto Rico</option>
+                                    <option th:value="188" th:text="">Qatar</option>
+                                    <option th:value="189" th:text="">Reino Unido</option>
+                                    <option th:value="190" th:text="">República Centroafricana</option>
+                                    <option th:value="191" th:text="">República Checa</option>
+                                    <option th:value="192" th:text="">República Dominicana</option>
+                                    <option th:value="193" th:text="">Reunión</option>
+                                    <option th:value="194" th:text="">Ruanda</option>
+                                    <option th:value="195" th:text="">Rumanía</option>
+                                    <option th:value="196" th:text="">Sahara Occidental</option>
+                                    <option th:value="197" th:text="">Saint Barthélemy</option>
+                                    <option th:value="198" th:text="">Samoa</option>
+                                    <option th:value="199" th:text="">Samoa Americana</option>
+                                    <option th:value="200" th:text="">San Cristóbal Nevis</option>
+                                    <option th:value="201" th:text="">San Marino</option>
+                                    <option th:value="202" th:text="">San Martín (parte holandesa)</option>
+                                    <option th:value="203" th:text="">San Martín (zona Francesa)</option>
+                                    <option th:value="204" th:text="">San Vicente y Las Granadinas</option>
+                                    <option th:value="205" th:text="">Santa Elena, Ascensión y Tristán de Acuña</option>
+                                    <option th:value="206" th:text="">Santa Lucía</option>
+                                    <option th:value="207" th:text="">Santo Tomé y Príncipe</option>
+                                    <option th:value="208" th:text="">Senegal</option>
+                                    <option th:value="209" th:text="">Serbia</option>
+                                    <option th:value="210" th:text="">Seychelles</option>
+                                    <option th:value="211" th:text="">Sierra Leona</option>
+                                    <option th:value="212" th:text="">Singapur</option>
+                                    <option th:value="213" th:text="">Siria</option>
+                                    <option th:value="214" th:text="">Somalia</option>
+                                    <option th:value="215" th:text="">Sri Lanka</option>
+                                    <option th:value="216" th:text="">Sudáfrica</option>
+                                    <option th:value="217" th:text="">Sudán</option>
+                                    <option th:value="218" th:text="">Sudán del Sur</option>
+                                    <option th:value="219" th:text="">Suecia</option>
+                                    <option th:value="220" th:text="">Suiza</option>
+                                    <option th:value="221" th:text="">Surinam</option>
+                                    <option th:value="222" th:text="">Swazilandia</option>
+                                    <option th:value="223" th:text="">Tailandia</option>
+                                    <option th:value="224" th:text="">Taiwán</option>
+                                    <option th:value="225" th:text="">Tanzania</option>
+                                    <option th:value="226" th:text="">Tayikistán</option>
+                                    <option th:value="227" th:text="">Territorio Británico del Océano Índico</option>
+                                    <option th:value="228" th:text="">Territorios Franceses del Sur</option>
+                                    <option th:value="229" th:text="">Timor-Leste</option>
+                                    <option th:value="230" th:text="">Togo</option>
+                                    <option th:value="231" th:text="">Tokelau</option>
+                                    <option th:value="232" th:text="">Tonga</option>
+                                    <option th:value="233" th:text="">Trinidad y Tobago</option>
+                                    <option th:value="234" th:text="">Túnez</option>
+                                    <option th:value="235" th:text="">Turkmenistán</option>
+                                    <option th:value="236" th:text="">Turquía</option>
+                                    <option th:value="237" th:text="">Tuvalu</option>
+                                    <option th:value="238" th:text="">Ucrania</option>
+                                    <option th:value="239" th:text="">Uganda</option>
+                                    <option th:value="240" th:text="">United States Minor Outlying Islands</option>
+                                    <option th:value="241" th:text="">Uruguay</option>
+                                    <option th:value="242" th:text="">Uzbekistán</option>
+                                    <option th:value="243" th:text="">Vanuatu</option>
+                                    <option th:value="244" th:text="">Venezuela, República Bolivariana de</option>
+                                    <option th:value="245" th:text="">Vietnam</option>
+                                    <option th:value="246" th:text="">Yemen</option>
+                                    <option th:value="247" th:text="">Zambia</option>
+                                    <option th:value="248" th:text="">Zimbawe</option>-->
                                 </select>
                         </div>
                     </div>
                 </div>
 
 
-                <h3>Otros campos</h3>
-                <hr>
+				<h3>Otros campos</h3>
+				<hr>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">DNI- NIF - NIE - PASAPORTE</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                            <input name="first_name" placeholder="" class="form-control" type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Dirección Postal</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                            <input name="address" placeholder="dirección postal" class="form-control" type="text">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">DNI- NIF - NIE -
+						PASAPORTE</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
+								placeholder="" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Dirección Postal</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-home"></i></span> <input name="address"
+								placeholder="dirección postal" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Código Postal</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                            <input name="zip" placeholder="código Postal" class="form-control" type="text">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Código Postal</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-home"></i></span> <input name="zip"
+								placeholder="código Postal" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Teléfono</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                            <input name="phone" placeholder="(+34) 659 785 290" class="form-control" type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label">Aviso Legal y Protección de Datos - Acepto</label>
-                    <div class="col-md-4 inputGroupContainer">
-                        <div class="input-group">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        </div>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Teléfono</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<span class="input-group-addon"><i
+								class="glyphicon glyphicon-earphone"></i></span> <input name="phone"
+								placeholder="(+34) 659 785 290" class="form-control" type="text">
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-2 control-label">Aviso Legal y
+						Protección de Datos - Acepto</label>
+					<div class="col-md-4 inputGroupContainer">
+						<div class="input-group">
+							<input type="checkbox" class="form-check-input"
+								id="exampleCheck1">
+						</div>
+					</div>
+				</div>
 
-                <div class="form-group">
-                    <label class="col-md-4 control-label"></label>
-                    <div class="col-md-4">
-                        <button type="submit" name="submit" class="btn btn-warning">Registrar <span
-                                class="glyphicon glyphicon-send"></span></button>
-                    </div>
-                </div>
+				<div class="form-group">
+					<label class="col-md-4 control-label"></label>
+					<div class="col-md-4">
+						<button type="submit" name="submit" class="btn btn-warning">
+							Registrar <span class="glyphicon glyphicon-send"></span>
+						</button>
+					</div>
+				</div>
 
-            </fieldset>
-        </form>
-    </div>
-    </div>
+			</fieldset>
+		</form>
+	</div>
+	</div>
 
 </body>
 
