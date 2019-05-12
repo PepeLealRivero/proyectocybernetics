@@ -15,7 +15,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 	
 	@Autowired
-	R repositorio;
+	protected R repositorio;
 
 	
 	
