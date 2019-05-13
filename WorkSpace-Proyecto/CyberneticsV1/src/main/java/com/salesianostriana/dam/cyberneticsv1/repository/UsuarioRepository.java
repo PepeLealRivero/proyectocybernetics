@@ -13,7 +13,8 @@ import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
  * @author Jose
  *
  */
-public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
+
+public interface UsuarioRepository<T extends Usuario> extends JpaRepository<T, Long>{
 	
 	public Usuario findFirstByNomUserAndPass(String nomUser, String pass);
 	

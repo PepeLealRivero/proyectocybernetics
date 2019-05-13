@@ -5,10 +5,12 @@ package com.salesianostriana.dam.cyberneticsv1.model;
 
 import java.time.LocalDate;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,8 +24,9 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-@MappedSuperclass
-public class Usuario {
+@Entity
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+public abstract class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

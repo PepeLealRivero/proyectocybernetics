@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
@@ -25,7 +26,9 @@ import lombok.ToString;
  */
 @Getter @Setter 
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true) @NoArgsConstructor
+@ToString(callSuper = true) 
+@DiscriminatorValue("P")
+@NoArgsConstructor
 @Entity(name = "Profesor")
 public class Profesor extends Usuario{
 	
