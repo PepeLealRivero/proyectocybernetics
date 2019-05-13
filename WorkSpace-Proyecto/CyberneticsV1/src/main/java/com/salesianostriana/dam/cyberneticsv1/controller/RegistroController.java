@@ -30,15 +30,15 @@ public class RegistroController {
 	
 	@GetMapping("/registro")
 	public String verFormRegistro(Model model) {
-		
 		model.addAttribute("registroForm", new Usuario());
+		//model.addAttribute("registroForm", new Usuario());
 		return "registro";
 	}
 	
 	@PostMapping("/addUser")
 	public String envio(@ModelAttribute("registroForm") Usuario usuario,  Model model) {
 		
-		if (usuarioService.findOneByNomUser(usuario.getNomUser()) != null || usuarioService.findByEmail(usuario.getEmail()) != null) {
+		if (usuarioService.findOneByNomUser(usuario.getNomUser()) != null || usuarioService.findOneByEmail(usuario.getEmail()) != null) {
 			
 			model.addAttribute("errorRegistro", "El usuario o email ya existe");
 			return "registro";

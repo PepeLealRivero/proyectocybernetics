@@ -13,14 +13,16 @@ import javax.persistence.TypedQuery;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.salesianostriana.dam.cyberneticsv1.baseservices.BaseServices;
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
+import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
 
 /**
  * @author Jose
  *
  */
 @Service
-public class UsuarioService {
+public class UsuarioService extends BaseServices<Usuario, Long, UsuarioRepository>{
 
 	
 
@@ -57,5 +59,9 @@ public class UsuarioService {
 		}
 
 		return result;
+	}
+	
+	public Usuario findOneByEmail(String email) {
+		return repositorio.findFirstByEmail(email);
 	}
 }
