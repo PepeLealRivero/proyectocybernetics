@@ -27,7 +27,7 @@ public class UsuarioService {
 	@Autowired
 	EntityManager entityManager;
 
-	public Usuario findUsuarioByUsername(String username) {
+	public Usuario findOneByNomUser(String username) {
 
 		Usuario result = null;
 

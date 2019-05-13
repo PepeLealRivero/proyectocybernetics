@@ -16,8 +16,8 @@ import com.salesianostriana.dam.cyberneticsv1.repository.AlumnoRepository;
 @Service
 public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
 	
-	public Alumno findByNomUser(String nomUser) {
+	/**public Alumno findByNomUser(String nomUser) {
 		return repositorio.findByUsername(nomUser);
-	}
+	}*/
 
 }
