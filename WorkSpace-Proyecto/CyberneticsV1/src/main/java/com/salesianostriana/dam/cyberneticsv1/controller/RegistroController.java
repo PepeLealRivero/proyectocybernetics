@@ -48,5 +48,11 @@ public class RegistroController {
 		}		
 		
 	}
+	
+	
+	
+	//Trabajo Belen
+	//https://alojamientos.uva.es/guia_docente/uploads/2013/443/41893/1/Documento6.pdf
+	//https://www.ilo.org/wcmsp5/groups/public/---ed_norm/---normes/documents/publication/wcms_087999.pdf
 
 }
