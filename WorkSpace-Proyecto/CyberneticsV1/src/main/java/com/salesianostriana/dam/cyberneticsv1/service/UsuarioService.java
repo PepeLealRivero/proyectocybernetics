@@ -64,4 +64,6 @@ public class UsuarioService extends BaseServices<Usuario, Long, UsuarioRepositor
 	public Usuario findOneByEmail(String email) {
 		return repositorio.findFirstByEmail(email);
 	}
+	
+	
 }

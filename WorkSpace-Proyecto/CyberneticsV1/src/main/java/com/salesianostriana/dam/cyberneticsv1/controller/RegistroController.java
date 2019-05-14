@@ -35,7 +35,7 @@ public class RegistroController {
 		return "registro";
 	}
 	
-	@PostMapping("/addUser")
+	@PostMapping("/inicio")
 	public String envio(@ModelAttribute("registroForm") Usuario usuario,  Model model) {
 		
 		if (usuarioService.findOneByNomUser(usuario.getNomUser()) != null || usuarioService.findOneByEmail(usuario.getEmail()) != null) {
