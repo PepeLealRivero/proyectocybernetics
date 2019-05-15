@@ -52,7 +52,7 @@
 	<nav
 		class="navbar navbar-dark navbar-expand-lg fixed-top navbar-custom">
 		<div class="container">
-			<a class="navbar-brand" href="paginaInicio.html">Cybernetics</a>
+			<a class="navbar-brand" th:href="@{/inicio}">Cybernetics</a>
 			<button class="navbar-toggler" data-toggle="collapse"
 				data-target="#navbarResponsive">
 				<span class="navbar-toggler-icon"></span>
@@ -60,11 +60,11 @@
 			<div id="navbarResponsive" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav ml-auto">
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="#">CURSOS</a></li>
+						th:href="@{/cursos}">CURSOS</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="registro.html">REGISTRATE</a></li>
+						th:href="@{/registro}">REGISTRATE</a></li>
 					<li class="nav-item" role="presentation"><a class="nav-link"
-						href="#">ACCEDER</a></li>
+						th:href="@{/login}">ACCEDER</a></li>
 				</ul>
 			</div>
 		</div>
@@ -547,11 +547,11 @@
 					<h5 class="font-weight-bold text-uppercase mt-3 mb-4">Cybernetics</h5>
 
 					<ul class="list-unstyled">
-						<li><a href="nosotros.html" style="color: black;">Sobre
+						<li><a th:href="@{/nosotros}" style="color: black;">Sobre
 								Cybernetics</a></li>
-						<li><a href="dondeStamos.html" style="color: black;">Dónde
+						<li><a th:href="@{/dondeStamos}" style="color: black;">Dónde
 								estamos</a></li>
-						<li><a href="#!" style="color: black;">Contacta con
+						<li><a th:href="@{/contacto}" style="color: black;">Contacta con
 								nosotros</a></li>
 					</ul>
 
@@ -613,7 +613,7 @@
 
 		<!-- Copyright -->
 		<div class="footer-copyright text-center py-3">
-			© 2019 Copyright: <a href="paginaInicio.html" style="color: black;">
+			© 2019 Copyright: <a th:href="@{/inicio}" style="color: black;">
 				Cybernetics.com</a>
 		</div>
 		<!-- Copyright -->

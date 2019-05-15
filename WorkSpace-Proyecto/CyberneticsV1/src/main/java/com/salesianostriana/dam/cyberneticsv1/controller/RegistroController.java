@@ -31,7 +31,7 @@ public class RegistroController {
 	
 	@GetMapping("/registro")
 	public String verFormRegistro(Model model) {
-		model.addAttribute("registroForm", new Usuario());
+		model.addAttribute("registroForm", new Alumno());
 		//model.addAttribute("registroForm", new Usuario());
 		return "registro";
 	}
