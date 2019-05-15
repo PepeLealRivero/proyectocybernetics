@@ -418,3 +418,7 @@ Caused by: java.lang.NumberFormatException: For input string: "1999/0"
 	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:369)
 	at org.h2.value.ValueDate.parse(ValueDate.java:73)
 	... 88 more
+2019-05-15 13:55:20 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "MOCK_DATA" no encontrada
+Table "MOCK_DATA" not found; SQL statement:
+insert into MOCK_DATA (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono) values (NEXTVAL('hibernate_sequence'), 'admin', 'admin', 'admin0@admin.com', 'Administrador', 'Administrador', '"1999-05-29"', 'Sevilla', 'Espa�a', '85613488C', 'Triana', '41010', '954858319') [42102-199]
