@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -25,7 +27,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @Entity
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Usuario {
 
 	@Id
@@ -37,6 +39,7 @@ public class Usuario {
 	private String email;
 	private String nombre;
 	private String apellidos;
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaNac;
 	private String ciudad;
 	private String pais;

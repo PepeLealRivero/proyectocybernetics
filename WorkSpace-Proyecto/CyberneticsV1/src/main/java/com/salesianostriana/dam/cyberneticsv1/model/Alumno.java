@@ -27,7 +27,6 @@ import lombok.ToString;
 @Getter @Setter 
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
-@DiscriminatorValue("A")
 @NoArgsConstructor
 @Entity(name = "Alumno")
 public class Alumno extends Usuario {
