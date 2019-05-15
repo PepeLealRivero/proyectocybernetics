@@ -28,16 +28,16 @@ public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
 	@Autowired
 	EntityManager entityManager;
 
-	public Alumno findOneByNomUser(String username) {
+	public Alumno findOneByNomUser(String nomUser) {
 
 		Alumno result = null;
 
 		TypedQuery<Alumno> query = 
-			entityManager.createQuery("select u from Usuario u where u.username = :username",
+			entityManager.createQuery("select a from Alumno a where a.nomUser = :nomUser",
 				Alumno.class);
 
 		try {
-			result = query.setParameter("username", username).getSingleResult();
+			result = query.setParameter("nomUser", nomUser).getSingleResult();
 		} catch (NoResultException | NonUniqueResultException ex) {
 			result = null;
 		}
@@ -49,7 +49,7 @@ public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
 
 		List<Alumno> result = null;
 
-		TypedQuery<Alumno> query = entityManager.createQuery("select u from Usuario u", Alumno.class);
+		TypedQuery<Alumno> query = entityManager.createQuery("select a from Alumno a", Alumno.class);
 
 		try {
 			result = query.getResultList();
