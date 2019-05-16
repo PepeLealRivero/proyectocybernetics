@@ -23,6 +23,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 private  UserDetailsService userDetailsService;
 	
+
     CustomSuccessHandler customSuccessHandler;
  
 	
@@ -48,21 +49,21 @@ private  UserDetailsService userDetailsService;
 	 protected void configure ( HttpSecurity http ) throws Exception {  
 		http
 			.authorizeRequests ()
-			.antMatchers ( " / css / ** " , " / js / ** " , " / webjars / ** " , " / h2-console / ** " ) . permitAll ()
-				.antMatchers ( " / admin / ** " ) . hasAnyRole ( " ADMIN " )
+			.antMatchers ( "/css/** " , "/js/**" , "/webjars/**" , "/h2-console/**" ) . permitAll ()
+				.antMatchers ( "/admin/**" ) . hasAnyRole ( "ADMIN" )
 				.anyRequest () . authenticated ()
 				.and()
 			.formLogin ()
-				.loginPage ( " / login " )
+				.loginPage ( "/login" )
 				.permitAll ()
-				.successHandler ((AuthenticationSuccessHandler) customSuccessHandler)
+				.successHandler (customSuccessHandler)
 				.and()
 			.logout()
-				.logoutUrl ( " / logout " )
+				.logoutUrl ( "/logout" )
 				.permitAll ()
 				.and()
 			.exceptionHandling()
-				.accessDeniedPage ( " / acceso-denegado " );
+				.accessDeniedPage ( "/acceso-denegado" );
 		
 		// Añadimos esto para poder seguir accediendo a la consola de H2
 		// Con Spring Security habilitado.

@@ -11,9 +11,9 @@ import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.cyberneticsv1.baseservices.BaseServices;
-import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
 import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
 
@@ -21,6 +21,7 @@ import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
  * @author jleal
  *
  */
+@Service
 public class UsuarioService extends BaseServices<Usuario, Long, UsuarioRepository>{
 	
 	@Autowired
