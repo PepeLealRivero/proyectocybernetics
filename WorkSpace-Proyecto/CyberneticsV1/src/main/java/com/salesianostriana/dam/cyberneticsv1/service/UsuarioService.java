@@ -11,30 +11,28 @@ import javax.persistence.NonUniqueResultException;
 import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.cyberneticsv1.baseservices.BaseServices;
 import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
-import com.salesianostriana.dam.cyberneticsv1.repository.AlumnoRepository;
+import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
 
 /**
  * @author jleal
  *
  */
-@Service
-public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
+public class UsuarioService extends BaseServices<Usuario, Long, UsuarioRepository>{
 	
 	@Autowired
 	EntityManager entityManager;
 
-	public Alumno findOneByNomUser(String nomUser) {
+	public Usuario findOneByNomUser(String nomUser) {
 
-		Alumno result = null;
+		Usuario result = null;
 
-		TypedQuery<Alumno> query = 
-			entityManager.createQuery("select a from Alumno a where a.nomUser = :nomUser",
-				Alumno.class);
+		TypedQuery<Usuario> query = 
+			entityManager.createQuery("select u from Usuario u where u.nomUser = :nomUser",
+				Usuario.class);
 
 		try {
 			result = query.setParameter("nomUser", nomUser).getSingleResult();
@@ -45,11 +43,11 @@ public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
 		return result;
 	}
 
-	public List<Alumno> findThemAll() {
+	public List<Usuario> findThemAll() {
 
-		List<Alumno> result = null;
+		List<Usuario> result = null;
 
-		TypedQuery<Alumno> query = entityManager.createQuery("select a from Alumno a", Alumno.class);
+		TypedQuery<Usuario> query = entityManager.createQuery("select u from Usuario u", Usuario.class);
 
 		try {
 			result = query.getResultList();
@@ -60,7 +58,7 @@ public class AlumnoService extends BaseServices<Alumno, Long, AlumnoRepository>{
 		return result;
 	}
 	
-	public Alumno findOneByEmail(String email) {
+	public Usuario findOneByEmail(String email) {
 		return repositorio.findFirstByEmail(email);
 	}
 

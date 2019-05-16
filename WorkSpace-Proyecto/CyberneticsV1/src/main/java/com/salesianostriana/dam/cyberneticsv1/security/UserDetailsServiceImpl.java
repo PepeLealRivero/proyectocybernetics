@@ -4,17 +4,19 @@
 package com.salesianostriana.dam.cyberneticsv1.security;
 
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
+import com.salesianostriana.dam.cyberneticsv1.service.UsuarioService;
 
 /**
  * @author lealr
  *
  */
 @Service("userDetailsService")
-public class UserDetailsServiceImpl {
+public class UserDetailsServiceImpl implements UserDetailsService {
 
 	UsuarioService usuarioService;
 
@@ -23,9 +25,9 @@ public class UserDetailsServiceImpl {
 	}
 
 	@Override
-	public UserDetails loadUserByNomUser(String nomUser) throws NomUserNotFoundException {
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
-		Usuario usuario = usuarioService.findFirstByEmail(NomUser);
+		Usuario usuario = usuarioService.findOneByEmail(username);
 
 		if (usuario == null) {
 			throw new UsernameNotFoundException("Usuario no encontrado");

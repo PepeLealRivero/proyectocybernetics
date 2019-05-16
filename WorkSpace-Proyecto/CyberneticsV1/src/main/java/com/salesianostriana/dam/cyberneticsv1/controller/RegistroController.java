@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
-import com.salesianostriana.dam.cyberneticsv1.repository.AlumnoRepository;
-import com.salesianostriana.dam.cyberneticsv1.service.AlumnoService;
+import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
+import com.salesianostriana.dam.cyberneticsv1.service.UsuarioService;
 
 
 /**
@@ -24,14 +24,14 @@ import com.salesianostriana.dam.cyberneticsv1.service.AlumnoService;
 public class RegistroController {
 	
 	@Autowired
-	private AlumnoRepository alumnoRepository;
+	private UsuarioRepository usuarioRepository;
 	
 	@Autowired
-	private AlumnoService alumnoService;
+	private UsuarioService usuarioService;
 	
 	@GetMapping("/registro")
 	public String verFormRegistro(Model model) {
-		model.addAttribute("registroForm", new Alumno());
+		model.addAttribute("registroForm", new Usuario());
 		//model.addAttribute("registroForm", new Usuario());
 		return "registro";
 	}
@@ -39,12 +39,12 @@ public class RegistroController {
 	@PostMapping("/addUser")
 	public String envio(@ModelAttribute("registroForm") Alumno alumno,  Model model) {
 		
-		if (alumnoService.findOneByNomUser(alumno.getNomUser()) != null || alumnoService.findOneByEmail(alumno.getEmail()) != null) {
+		if (usuarioService.findOneByNomUser(alumno.getNomUser()) != null || usuarioService.findOneByEmail(alumno.getEmail()) != null) {
 			
 			model.addAttribute("errorRegistro", "El usuario o email ya existe");
 			return "registro";
 		}else {
-			alumnoRepository.save(alumno);
+			usuarioRepository.save(alumno);
 			return "inicio";
 		}		
 		

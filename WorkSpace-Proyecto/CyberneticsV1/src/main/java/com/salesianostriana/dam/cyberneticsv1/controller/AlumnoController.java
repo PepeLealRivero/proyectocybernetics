@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
-import com.salesianostriana.dam.cyberneticsv1.service.AlumnoService;
 
 /**
  * @author Jose
