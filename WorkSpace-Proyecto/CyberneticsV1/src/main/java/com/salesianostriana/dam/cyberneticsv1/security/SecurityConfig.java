@@ -58,6 +58,7 @@ private  UserDetailsService userDetailsService;
 				.loginPage ( "/login" )
 				.permitAll ()
 				.successHandler (customSuccessHandler)
+				.successForwardUrl("/inicio")
 				.and()
 			.logout()
 				.logoutUrl ( "/logout" )

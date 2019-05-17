@@ -19,30 +19,51 @@ public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 
 	
 	
-	public T add(T T) {
-		return repositorio.save(T);
-	}
-
-	public T edit(T T) {
-		return repositorio.save(T);
-	}
-
-	public void delete(T t) {
-		repositorio.delete(t);
-	}
-
-	public void deleteById(ID id) {
-		repositorio.deleteById(id);
-	}
-
-	
-	public List<T> findAll(){
-		return repositorio.findAll();
+	public T save(T t) {
+		return repositorio.save(t);
 	}
 	
+	/**
+	 * Localizamos una entidad en base a su Id
+	 * 
+	 * @param id
+	 * @return
+	 */
 	public T findById(ID id) {
 		return repositorio.findById(id).orElse(null);
 	}
-
+	
+	/**
+	 * Obtenemos todas las entidades de un tipo de entidad
+	 * @return
+	 */
+	public List<T> findAll() {
+		return repositorio.findAll();
+	}
+	
+	/**
+	 * Editamos una instancia de una entidad (si no tiene Id, la insertamos).
+	 * @param t
+	 * @return
+	 */
+	public T edit(T t) {
+		return repositorio.save(t);
+	}
+	
+	/**
+	 * Eliminamos una instancia de una entidad
+	 * @param t
+	 */
+	public void delete(T t) {
+		repositorio.delete(t);
+	}
+	
+	/**
+	 * Eliminamos una instancia en base a su ID
+	 * @param id
+	 */
+	public void deleteById(ID id) {
+		repositorio.deleteById(id);
+	}
 
 }

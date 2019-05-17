@@ -71,7 +71,7 @@
 
     <div class="container fa-border mt-4">
         <h2>Acceda a su cuenta</h2>
-        <form action="/action_page.php" class="needs-validation" novalidate method="POST"> 
+        <form th:action="@{/login}" action="/action_page.php" class="needs-validation" novalidate method="POST"> 
             <div class="form-group">
                 <label for="uname">Nombre Usuario:</label>
                 <input type="text" class="form-control" id="uname" placeholder="Nombre Usuario" name="uname" required>
