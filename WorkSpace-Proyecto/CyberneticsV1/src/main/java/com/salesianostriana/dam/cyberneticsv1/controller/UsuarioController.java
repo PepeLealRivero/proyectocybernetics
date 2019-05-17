@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class UsuarioController {
 	
-	@GetMapping("/inicio")
-	public String verInicio(Model model) {
-		
-		return "inicio";
-	}
+//	@GetMapping("/inicio")
+//	public String verInicio(Model model) {
+//		
+//		return "inicio";
+//	}
 
 }
