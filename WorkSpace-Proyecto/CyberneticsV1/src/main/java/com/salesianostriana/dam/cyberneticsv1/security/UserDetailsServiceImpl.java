@@ -3,6 +3,7 @@
  */
 package com.salesianostriana.dam.cyberneticsv1.security;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -18,6 +19,7 @@ import com.salesianostriana.dam.cyberneticsv1.service.UsuarioService;
 @Service("userDetailsService")
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+	@Autowired
 	UsuarioService usuarioService;
 
 	public UserDetailsServiceImpl(UsuarioService servicio) {

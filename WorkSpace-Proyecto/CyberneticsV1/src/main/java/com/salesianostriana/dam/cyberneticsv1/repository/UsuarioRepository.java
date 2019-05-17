@@ -2,7 +2,6 @@ package com.salesianostriana.dam.cyberneticsv1.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
 import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
