@@ -57,7 +57,7 @@ public class Alumno extends Usuario {
 	 * @param pedido
 	 */
 	public Alumno(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
-			String ciudad, String pais, String dni, String direccion, int codigoPostal, float telefono, Pedido pedido) {
+			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono, Pedido pedido) {
 		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
 		this.pedido = pedido;
 	}

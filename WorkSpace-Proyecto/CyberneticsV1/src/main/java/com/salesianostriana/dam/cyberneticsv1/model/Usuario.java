@@ -48,8 +48,8 @@ public abstract class Usuario implements UserDetails{
 	private String pais;
 	private String dni;
 	private String direccion;
-	private int codigoPostal;
-	private float telefono;
+	private String codigoPostal;
+	private String telefono;
 	private boolean isAdmin;
 
 	/**
@@ -68,7 +68,7 @@ public abstract class Usuario implements UserDetails{
 	 */
 
 	public Usuario(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
-			String ciudad, String pais, String dni, String direccion, int codigoPostal, float telefono) {
+			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono) {
 		this.nomUser = nomUser;
 		this.pass = pass;
 		this.email = email;

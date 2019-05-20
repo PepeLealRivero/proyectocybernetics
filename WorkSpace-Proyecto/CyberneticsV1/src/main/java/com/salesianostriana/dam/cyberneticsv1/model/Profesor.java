@@ -56,7 +56,7 @@ public class Profesor extends Usuario{
 	 * @param telefono     Número de contacto
 	 */
 	public Profesor(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
-			String ciudad, String pais, String dni, String direccion, int codigoPostal, float telefono,
+			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono,
 			boolean isAdmin) {
 		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
 		this.isAdmin = isAdmin;
