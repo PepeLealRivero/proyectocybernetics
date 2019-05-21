@@ -21,7 +21,7 @@ import com.salesianostriana.dam.cyberneticsv1.service.UsuarioService;
  * @author lealr
  *
  */
-@Controller
+/*@Controller
 public class LoginController {
 
 	@Autowired
@@ -56,4 +56,4 @@ public class LoginController {
 
 	}
 
-}
+}*/

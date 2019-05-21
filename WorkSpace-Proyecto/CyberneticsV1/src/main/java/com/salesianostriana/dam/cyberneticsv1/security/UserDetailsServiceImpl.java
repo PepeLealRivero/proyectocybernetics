@@ -30,7 +30,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
 		Usuario usuario = usuarioService.findOneByEmail(username);
-
+		System.out.println(usuario);
 		if (usuario == null) {
 			throw new UsernameNotFoundException("Usuario no encontrado");
 		}

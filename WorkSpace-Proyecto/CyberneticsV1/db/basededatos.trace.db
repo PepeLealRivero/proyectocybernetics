@@ -1521,3 +1521,7 @@ Caused by: java.lang.NumberFormatException: For input string: "1999/0"
 	at org.h2.util.DateTimeUtils.parseDateValue(DateTimeUtils.java:369)
 	at org.h2.value.ValueDate.parse(ValueDate.java:73)
 	... 88 more
+2019-05-21 10:57:27 jdbc[14]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROMCURSO[*]"
+Syntax error in SQL statement "SELECT * FROMCURSO[*]"; SQL statement:
+SELECT * FROMCURSO [42000-199]

@@ -4,6 +4,7 @@
 package com.salesianostriana.dam.cyberneticsv1.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.salesianostriana.dam.cyberneticsv1.model.Alumno;
-import com.salesianostriana.dam.cyberneticsv1.model.Usuario;
 import com.salesianostriana.dam.cyberneticsv1.repository.UsuarioRepository;
 import com.salesianostriana.dam.cyberneticsv1.service.UsuarioService;
 
@@ -37,6 +37,10 @@ public class RegistroController {
 	
 	@PostMapping("/addUser")
 	public String envio(@ModelAttribute("registroForm") Alumno alumno,  Model model) {
+		
+		BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+
+		alumno.setPass(passwordEncoder.encode(alumno.getPass()));
 		
 		if (usuarioService.findOneByNomUser(alumno.getNomUser()) != null || usuarioService.findOneByEmail(alumno.getEmail()) != null) {
 			

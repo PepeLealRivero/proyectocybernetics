@@ -21,7 +21,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
-private  UserDetailsService userDetailsService;
+	private  UserDetailsService userDetailsService;
 	
 
     CustomSuccessHandler customSuccessHandler;
@@ -50,7 +50,7 @@ private  UserDetailsService userDetailsService;
 	 protected void configure ( HttpSecurity http ) throws Exception {  
 		http
 			.authorizeRequests ()
-			.antMatchers ( "/css/** " , "/js/**" , "/webjars/**" , "/h2-console/**" ) . permitAll ()
+			.antMatchers ( "/css/** " , "/js/**" , "/webjars/**" , "/h2-console/**","/*" ) . permitAll ()
 				.antMatchers ( "/admin/**" ) . hasAnyRole ( "ADMIN" )
 				.anyRequest () . authenticated ()
 				.and()
