@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -26,9 +26,7 @@
         }
         
         #menu li {
-            line-height: 0%;
-            border: 1px solid black;
-            text-align: center;
+            line-height: 180%;
         }
         
         #menu li a {
@@ -63,7 +61,6 @@
         #menu input:checked~ul {
             display: block;
         }
-        
     </style>
 </head>
 
@@ -73,20 +70,20 @@
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="paginaInicio.html">Cybernetics</a>
+            <a class="navbar-brand" th:href="@{/inicio}">Cybernetics</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarResponsive" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="cursos.html">CURSOS</a>
+                        <a class="nav-link" th:href="@{/cursos}">CURSOS</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="registro.html">REGISTRATE</a>
+                        <a class="nav-link" th:href="@{/registro}">REGISTRATE</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="login.html">ACCEDER</a>
+                        <a class="nav-link" th:href="@{/login}">ACCEDER</a>
                     </li>
                 </ul>
             </div>
@@ -106,9 +103,23 @@
                 <button>Buscar</button>
             </div>
         </form>
-        <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">MÁSTERES CON ACREDITACIÓN UNIVERSITARIA</label>
+        <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">Nivel 1</label>
             <ul class="interior">
-                <li><a href="#!"></a></li>
+                <li><input type="checkbox" name="list" id="nivel2-1"><label for="nivel2-1">Nivel 2</label>
+                    <ul class="interior">
+                        <li><a href="#r">Nivel 3</a></li>
+                        <li><a href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+                <li><input type="checkbox" name="list" id="nivel2-2"><label for="nivel2-2">Nivel 2</label>
+                    <ul class="interior">
+                        <li><a href="#r">Nivel 3</a></li>
+                        <li><a href="#r">Nivel 3</a></li>
+                        <li><a href="#r">Nivel 3</a></li>
+                        <li><a href="#r">Nivel 3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#r">Nivel 2</a></li>
             </ul>
         </li>
         <li><input type="checkbox" name="list" id="nivel1-2" checked=""><label for="nivel1-2">Nivel 1</label>
@@ -166,13 +177,13 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="nosotros.html" style="color: black;">Sobre Cybernetics</a>
+                            <a th:href="@{/nosotros}" style="color: black;">Sobre Cybernetics</a>
                         </li>
                         <li>
-                            <a href="dondeStamos.html" style="color: black;">Dónde estamos</a>
+                            <a th:href="@{/dondeStamos}" style="color: black;">Dónde estamos</a>
                         </li>
                         <li>
-                            <a href="#!" style="color: black;">Contacta con nosotros</a>
+                            <a th:href="@{/contacto}" style="color: black;">Contacta con nosotros</a>
                         </li>
                     </ul>
 
@@ -234,7 +245,7 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="paginaInicio.html" style="color: black;"> Cybernetics.com</a>
+            <a th:href="@{/inicio}" style="color: black;"> Cybernetics.com</a>
         </div>
         <!-- Copyright -->
 

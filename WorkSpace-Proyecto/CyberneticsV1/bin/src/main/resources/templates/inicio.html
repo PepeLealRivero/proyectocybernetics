@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" th:href="{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script th:src="{/webjars/jquery-3.3.1.slim.min.js}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script th:src="{/webjars/ajax/libs/popper.js/1.14.7/umd/popper.min.js}" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script th:src="{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" th:href="{/webjars/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css}">
     <style>
         .navbar {
             background: #4E56AF;
@@ -27,17 +27,17 @@
 
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top navbar-custom">
         <div class="container">
-            <a class="navbar-brand" href="paginaInicio.html">Cybernetics</a>
+            <a class="navbar-brand" th:href="@{/inicio}">Cybernetics</a>
             <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="navbarResponsive" class="collapse navbar-collapse">
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="#">CURSOS</a>
+                        <a class="nav-link" th:href="@{/cursos}">CURSOS</a>
                     </li>
                     <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="registro.html">REGISTRATE</a>
+                        <a class="nav-link" th:href="@{/registro}">REGISTRATE</a>
                     </li>
                     <li class="nav-item" role="presentation">
                         <a class="nav-link" th:href="@{/login}">ACCEDER</a>
@@ -65,13 +65,13 @@
                 <!-- IMAGENES -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="img/images.jpg" alt="Los Angeles">
+                        <img th:src="@{/img/images.jpg}" alt="Los Angeles">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/analista.png" style="" alt="Chicago">
+                        <img th:src="@{/img/analista.png}" style="" alt="Chicago">
                     </div>
                     <div class="carousel-item">
-                        <img src="img/booter01.png" alt="New York">
+                        <img th:src="@{/img/booter01.png}" alt="New York">
                     </div>
                 </div>
 
@@ -120,13 +120,13 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="nosotros.html" style="color: black;">Sobre Cybernetics</a>
+                            <a th:href="@{/nosotros}" style="color: black;">Sobre Cybernetics</a>
                         </li>
                         <li>
-                            <a href="dondeStamos.html" style="color: black;">Dónde estamos</a>
+                            <a th:href="@{/dondeStamos}" style="color: black;">Dónde estamos</a>
                         </li>
                         <li>
-                            <a href="#!" style="color: black;">Contacta con nosotros</a>
+                            <a th:href="@{/contacto}" style="color: black;">Contacta con nosotros</a>
                         </li>
                     </ul>
 
@@ -188,7 +188,7 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2019 Copyright:
-            <a href="paginaInicio.html" style="color: black;"> Cybernetics.com</a>
+            <a th:href="@{/inicio}" style="color: black;"> Cybernetics.com</a>
         </div>
         <!-- Copyright -->
 
