@@ -1525,3 +1525,263 @@ Caused by: java.lang.NumberFormatException: For input string: "1999/0"
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "SELECT * FROMCURSO[*]"
 Syntax error in SQL statement "SELECT * FROMCURSO[*]"; SQL statement:
 SELECT * FROMCURSO [42000-199]
+2019-05-21 12:24:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 12:25:01 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 12:25:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 12:33:46 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 12:34:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿[*]"
+Syntax error in SQL statement "﻿[*]"; SQL statement:
+﻿ [42000-199]
+2019-05-21 12:36:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 13:06:07 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (false, false, false, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 13:36:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS, ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (cuentaCaducada, cuentaBloqueada, credencialesCaducadas, id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 13:37:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:48:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), '1234', '$2y$12$90BbqcDnczwwUAHOwkJt1.sDbB9fIc5cUnmu6cMEOU9HkWEwwr30O', 'usuario@usuario.com', 'Usuario', 'Usuario', '1998-06-10', 'Sevilla', 'España', '41561365Z', 'Alcosa', '41019', '954421531', FALSE, FALSE, FALSE, FALSE) [21002-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-05-21 13:48:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: La cantidad de columnas no coincide
+Column count does not match; SQL statement:
+INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (FALSE, FALSE, FALSE, NEXTVAL('hibernate_sequence'), '1234', '$2y$12$90BbqcDnczwwUAHOwkJt1.sDbB9fIc5cUnmu6cMEOU9HkWEwwr30O', 'usuario@usuario.com', 'Usuario', 'Usuario', '1998-06-10', 'Sevilla', 'España', '41561365Z', 'Alcosa', '41019', '954421531', FALSE, FALSE, FALSE, FALSE) [21002-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:451)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.message.DbException.get(DbException.java:170)
+	at org.h2.command.dml.Insert.prepare(Insert.java:314)
+	at org.h2.command.Parser.prepareCommand(Parser.java:689)
+	at org.h2.engine.Session.prepareLocal(Session.java:627)
+	at org.h2.engine.Session.prepareCommand(Session.java:565)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1292)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:217)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:1113)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1436)
+	at org.h2.server.web.WebApp.query(WebApp.java:1111)
+	at org.h2.server.web.WebApp.query(WebApp.java:1087)
+	at org.h2.server.web.WebApp.process(WebApp.java:237)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:169)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:121)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:158)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:834)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1415)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+2019-05-21 13:50:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:50:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:51:20 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:52:07 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:53:17 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE) [42000-199]
+2019-05-21 13:55:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:58:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO(ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '16516343C', 'Nervión', '41005', '954415134', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO(ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '16516343C', 'Nervión', '41005', '954415134', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO(id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '16516343C', 'Nervión', '41005', '954415134', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 13:59:13 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
+2019-05-21 14:00:08 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿[*]"
+Syntax error in SQL statement "﻿[*]"; SQL statement:
+﻿ [42000-199]

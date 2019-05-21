@@ -51,6 +51,11 @@ public abstract class Usuario implements UserDetails{
 	private String codigoPostal;
 	private String telefono;
 	private boolean isAdmin;
+	
+
+	private boolean cuentaCaducada;
+	private boolean cuentaBloqueada;
+	private boolean credencialesCaducadas;
 
 	/**
 	 * @param nomUser      Nombre de Usuario
@@ -68,7 +73,8 @@ public abstract class Usuario implements UserDetails{
 	 */
 
 	public Usuario(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
-			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono) {
+			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono, boolean cuentaCaducada,
+			boolean cuentaBloqueada, boolean credencialesCaducadas) {
 		this.nomUser = nomUser;
 		this.pass = pass;
 		this.email = email;
@@ -81,13 +87,13 @@ public abstract class Usuario implements UserDetails{
 		this.direccion = direccion;
 		this.codigoPostal = codigoPostal;
 		this.telefono = telefono;
+		this.cuentaCaducada = false;
+		this.cuentaBloqueada = false;
+		this.credencialesCaducadas = false;
 	}
 
 	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	public abstract Collection<? extends GrantedAuthority> getAuthorities();
 
 	@Override
 	public String getPassword() {
@@ -104,25 +110,25 @@ public abstract class Usuario implements UserDetails{
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return !cuentaCaducada;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return !cuentaBloqueada;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return !credencialesCaducadas;
 	}
 
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return !cuentaBloqueada;
 	}
 	
 	

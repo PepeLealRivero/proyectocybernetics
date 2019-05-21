@@ -57,8 +57,9 @@ public class Profesor extends Usuario{
 	 */
 	public Profesor(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
 			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono,
-			boolean isAdmin) {
-		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
+			boolean isAdmin, boolean cuentaCaducada,
+			boolean cuentaBloqueada, boolean credencialesCaducadas) {
+		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, cuentaCaducada, cuentaBloqueada, credencialesCaducadas);
 		this.isAdmin = isAdmin;
 	}
 	

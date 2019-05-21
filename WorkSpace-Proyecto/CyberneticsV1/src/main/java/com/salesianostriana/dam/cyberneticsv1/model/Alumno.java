@@ -10,6 +10,7 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
@@ -38,7 +39,7 @@ public class Alumno extends Usuario {
 	@ManyToOne
 	private Pedido pedido;
 	
-	@ManyToMany(mappedBy="alumnos")
+	@ManyToMany(mappedBy="alumnos", fetch=FetchType.EAGER)
 	private List<Curso> cursos = new ArrayList<>();
 
 	/**
@@ -57,8 +58,9 @@ public class Alumno extends Usuario {
 	 * @param pedido
 	 */
 	public Alumno(String nomUser, String pass, String email, String nombre, String apellidos, LocalDate fechaNac,
-			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono, Pedido pedido) {
-		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono);
+			String ciudad, String pais, String dni, String direccion, String codigoPostal, String telefono, Pedido pedido, boolean cuentaCaducada,
+			boolean cuentaBloqueada, boolean credencialesCaducadas) {
+		super(nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, cuentaCaducada, cuentaBloqueada, credencialesCaducadas);
 		this.pedido = pedido;
 	}
 	
@@ -66,5 +68,4 @@ public class Alumno extends Usuario {
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
 	}
-	
 }
