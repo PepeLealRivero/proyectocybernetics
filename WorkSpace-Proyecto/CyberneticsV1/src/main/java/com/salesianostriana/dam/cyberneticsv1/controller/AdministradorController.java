@@ -27,6 +27,12 @@ public class AdministradorController {
 	@Autowired
 	private CursoService cursoService;
 	
+	@GetMapping({"/", "/list"})
+	public String listarTodos(Model model) {
+		model.addAttribute("lista", cursoService.findAll());
+		return "index";
+	}
+	
 	@GetMapping("/crearCurso")
 	public String verRegistroCurso(Model model) {
 		

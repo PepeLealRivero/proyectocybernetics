@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Registro</title>
 <script type="text/javascript"></script>
+
 <link rel="stylesheet"
 	th:href="{/bootstrap/4.3.1/css/bootstrap.min.css}"
 	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -83,7 +84,7 @@
 						<div class="input-group">
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
-								placeholder="Nombre Usuario" class="form-control" type="text"
+								placeholder="Nombre Curso" class="form-control" type="text"
 								th:field="*{nombre}">
 						</div>
 					</div>
@@ -94,7 +95,7 @@
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-user"></i></span> <input name="last_name"
+								class="glyphicon glyphicon-user"></i></span> <input 
 								placeholder="Escriba una breve descripción" class="form-control" type="text"
 								th:field="*{descripcion}">
 						</div>
@@ -107,8 +108,7 @@
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-envelope"></i></span> <input name="email"
-								placeholder="E-Mail" class="form-control" type="text"
+								class="glyphicon glyphicon-envelope"></i></span> <input  class="form-control" type="text"
 								th:field="*{precio}">
 						</div>
 					</div>
@@ -121,8 +121,7 @@
 					<div class="col-md-4 inputGroupContainer">
 						<div class="input-group">
 							<span class="input-group-addon"><i
-								class="glyphicon glyphicon-user"></i></span> <input name="first_name"
-								placeholder="Apellidos" class="form-control" type="text"
+								class="glyphicon glyphicon-user"></i></span> <input  class="form-control" type="text"
 								th:field="*{duracion}">
 						</div>
 					</div>
@@ -148,22 +147,13 @@
 							<span class="input-group-addon"><i
 								class="glyphicon glyphicon-list"></i></span> <select name="state"
 								class="form-control selectpicker" th:field="*{categoria}">
-								<option th:value="0" th:text="Select">Sellecione la categoría</option>
-								<option th:value="1">Inteligencia e Información</option>
-								<option th:value="2">CiberSeguridad</option>
-								<option th:value="3">Amenaza Yihadista</option>
-								<option th:value="4">Terrorismo y Crimen Organizado</option>
-								<option th:value="5">Seguridad y Defensa</option>
-								<option th:value="6">Tecnología Militar</option>
-								<option th:value="7">Estudios Estratégicos</option>
-								<option th:value="8">Historia Militar</option>
-								<option th:value="9">Táctico-Sanitaria Y PRL</option>
-								<option th:value="10">Gestión Ambiental</option>
-								<option th:value="11">Supervivencia, Rescate y Prevención</option>
+								<option th:each="curso : ${lista}" th:value="${curso}" th:text="${curso}" ></option>
 							</select>
 						</div>
 					</div>
 				</div>
+				
+			
 
 			</fieldset>
 		</form>
