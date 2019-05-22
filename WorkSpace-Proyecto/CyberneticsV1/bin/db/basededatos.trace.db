@@ -1785,3 +1785,67 @@ Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMA
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿[*]"
 Syntax error in SQL statement "﻿[*]"; SQL statement:
 ﻿ [42000-199]
+2019-05-21 19:05:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "INSERT INTO CURSO (ID, NOMBRE,,[*] FECHAINICIO, DURACION, DESCRIPCION, PRECIO, IMAGE) VALUES (NEXTVAL('hibernate_sequences'), 'TÉCNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)', '2019-06-29', 2, 'Este programa incluye los principios, las técnicas y los procedimientos que el alumno necesita para la adquisición de información en el ciberespacio. Su integración en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.', 313.50, NULL) "; se esperaba "identifier"
+Syntax error in SQL statement "INSERT INTO CURSO (ID, NOMBRE,,[*] FECHAINICIO, DURACION, DESCRIPCION, PRECIO, IMAGE) VALUES (NEXTVAL('hibernate_sequences'), 'TÉCNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)', '2019-06-29', 2, 'Este programa incluye los principios, las técnicas y los procedimientos que el alumno necesita para la adquisición de información en el ciberespacio. Su integración en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.', 313.50, NULL) "; expected "identifier"; SQL statement:
+INSERT INTO CURSO (id, nombre,, fechaInicio, duracion, descripcion, precio, image) VALUES (NEXTVAL('hibernate_sequences'), 'TÉCNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)', '2019-06-29', 2, 'Este programa incluye los principios, las técnicas y los procedimientos que el alumno necesita para la adquisición de información en el ciberespacio. Su integración en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.', 313.50, null) [42001-199]
+2019-05-21 19:06:23 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Sequence "HIBERNATE_SEQUENCES" no encontrado
+Sequence "HIBERNATE_SEQUENCES" not found; SQL statement:
+INSERT INTO CURSO (id, nombre, fechaInicio, duracion, descripcion, precio, image) VALUES (NEXTVAL('hibernate_sequences'), 'TÉCNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)', '2019-06-29', 2, 'Este programa incluye los principios, las técnicas y los procedimientos que el alumno necesita para la adquisición de información en el ciberespacio. Su integración en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.', 313.50, null) -- (NEXTVAL('hibernate_sequences'), STRINGDECODE('T\u00c9CNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)'), '2019-06-29', 2, STRINGDECODE('Este programa incluye los principios, las t\u00e9cnicas y los procedimientos que el alumno necesita para la adquisici\u00f3n de informaci\u00f3n en el ciberespacio. Su integraci\u00f3n en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.'), 313.50, NULL) [90036-199]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:573)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:427)
+	at org.h2.message.DbException.get(DbException.java:205)
+	at org.h2.message.DbException.get(DbException.java:181)
+	at org.h2.schema.Schema.getSequence(Schema.java:588)
+	at org.h2.expression.function.Function.getSequence(Function.java:1798)
+	at org.h2.expression.function.Function.getValueWithArgs(Function.java:1533)
+	at org.h2.expression.function.Function.getValue(Function.java:607)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:164)
+	at org.h2.command.dml.Insert.update(Insert.java:132)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:133)
+	at org.h2.command.Command.executeUpdate(Command.java:267)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:233)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:205)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:488)
+	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:238)
+	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:48)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.runScripts(DataSourceInitializer.java:210)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializer.initSchema(DataSourceInitializer.java:123)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:93)
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceInitializerInvoker.onApplicationEvent(DataSourceInitializerInvoker.java:37)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:402)
+	at org.springframework.context.support.AbstractApplicationContext.publishEvent(AbstractApplicationContext.java:359)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.publishEventIfRequired(DataSourceInitializedPublisher.java:98)
+	at org.springframework.boot.autoconfigure.orm.jpa.DataSourceInitializedPublisher.postProcessAfterInitialization(DataSourceInitializedPublisher.java:88)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsAfterInitialization(AbstractAutowireCapableBeanFactory.java:429)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1105)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at com.salesianostriana.dam.cyberneticsv1.CyberneticsV1Application.main(CyberneticsV1Application.java:13)
+2019-05-21 19:06:50 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Valor demasiado largo para la columna """DESCRIPCION"" VARCHAR(255)": "STRINGDECODE('Este programa incluye los principios, las t\u00e9cnicas y los procedimientos que el alumno necesita para la adquis... (270)"
+Value too long for column """DESCRIPCION"" VARCHAR(255)": "STRINGDECODE('Este programa incluye los principios, las t\u00e9cnicas y los procedimientos que el alumno necesita para la adquis... (270)"; SQL statement:
+INSERT INTO CURSO (id, nombre, fechaInicio, duracion, descripcion, precio, image) VALUES (NEXTVAL('hibernate_sequence'), 'TÉCNICO AVANZADO EN CIBERINTELIGENCIA E INTELIGENCIA EN SOCIAL MEDIA (SOCMINT)', '2019-06-29', 2, 'Este programa incluye los principios, las técnicas y los procedimientos que el alumno necesita para la adquisición de información en el ciberespacio. Su integración en el ciclo de inteligencia y en el planeamiento de las operaciones. Los actores y objetivos principales.', 313.50, null) [22001-199]
+2019-05-21 19:15:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "
+Syntax error in SQL statement "﻿INSERT[*] INTO USUARIO (ID, NOMUSER, PASS, EMAIL, NOMBRE, APELLIDOS, FECHANAC, CIUDAD, PAIS, DNI, DIRECCION, CODIGOPOSTAL, TELEFONO, ISADMIN, CUENTACADUCADA, CUENTABLOQUEADA, CREDENCIALESCADUCADAS) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) "; SQL statement:
+﻿INSERT INTO USUARIO (id, nomUser, pass, email, nombre, apellidos, fechaNac, ciudad, pais, dni, direccion, codigoPostal, telefono, isAdmin, cuentaCaducada, cuentaBloqueada, credencialesCaducadas) VALUES (NEXTVAL('hibernate_sequence'), 'admin', '$2y$12$vCp.9btEQjm8RC19uEFNCun9hAeLioioDd6ZEgLmAL5kGB7QiNdta', 'admin@admin.com', 'Administrador', 'Administrador', '1999-05-29', 'Sevilla', 'España', '85613488C', 'Nervión', '41010', '954858319', TRUE, FALSE, FALSE, FALSE) [42000-199]
