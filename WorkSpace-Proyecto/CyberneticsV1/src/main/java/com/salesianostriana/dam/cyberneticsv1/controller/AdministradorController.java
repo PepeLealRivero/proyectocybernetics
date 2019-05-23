@@ -51,7 +51,7 @@ public class AdministradorController {
 			return "newCurso";
 		}else {
 			cursoRepository.save(curso);
-			return "/inicio";
+			return "/cursos";
 		}		
 		
 	}
