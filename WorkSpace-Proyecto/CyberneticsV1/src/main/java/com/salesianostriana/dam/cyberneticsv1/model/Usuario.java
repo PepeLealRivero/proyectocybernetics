@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
  * @author Jose
  * @version 1.0
  * 
- *          Esta clase es la entidad de Profesor
+ * Esta clase es la entidad de Profesor
  */
 
 @Data

@@ -64,6 +64,19 @@ public class CursoService extends BaseServices<Curso, Long, CursoRepository>{
 	public Curso findOneByFechaInicio(LocalDate fechaInicio) {
 		return repositorio.findOneByFechaInicio(fechaInicio);
 	}
+	
+	public boolean addCurso(Curso curso) {
+		Curso cursoSaved = repositorio.save(curso);
+		if (cursoSaved != null) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	public void removeCurso(Long id) {
+		repositorio.deleteById(id);
+	}
 
 	
 	

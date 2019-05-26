@@ -34,7 +34,7 @@ import lombok.NoArgsConstructor;
 public class Curso {
 	
 	@Id @GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 	
 	private String nombre;
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
