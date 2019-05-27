@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" xmlns:th="http://www.thymeleaf.org">
->
+
 
 <head>
 <meta charset="UTF-8">
@@ -51,7 +51,8 @@
 	</nav>
 	<div class="container">
 
-		<form class="well form-horizontal" th:action="@{/addCurso}" method="POST"
+		<form class="well form-horizontal" th:action="${cursoForm.id != 0} ? @{/editar/submit} : @{/addCurso}"
+			 method="POST"
 			id="contact_form" th:object="${cursoForm}">
 			<fieldset>
 
@@ -61,7 +62,7 @@
 				  <span th:text="${errorRegistro}"></span>
 				</div>
 				<hr>
-				<input type="hidden" th:field="*{id}" th:value="${id}"></input>
+				<input th:if="${cursoForm.id != 0}" type="hidden" name="id" th:field="*{id}" />
 				<div class="form-group">
 					<label class="col-md-2 control-label">Nombre del curso</label>
 					<div class="col-md-4 inputGroupContainer">

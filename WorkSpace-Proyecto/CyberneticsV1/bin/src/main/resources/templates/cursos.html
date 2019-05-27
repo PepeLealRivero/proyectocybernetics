@@ -9,6 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
     <style>
         .navbar {
             background: #4E56AF;
@@ -61,6 +63,10 @@
         #menu input:checked~ul {
             display: block;
         }
+        
+        .contenedor{
+        	margin-top: 8%;
+        }
     </style>
 </head>
 
@@ -94,54 +100,62 @@
 
 
     <!--CUERPO DE LA PÁGINA-->
-
-
-    <ul id="menu">
-        <form>
+    <div class="contenedor">
+		<div class="accordion" id="accordion">
+		  <div class="card" th:each="tipoFormacion : ${formaciones}">
+		    <div class="card-header" th:id="'accordion' + ${tipoFormacion.id}">
+		      <h5 class="mb-0">
+		        <button class="btn btn-link" data-toggle="collapse" th:attr="data-target='#collapse' + ${tipoFormacion.id}, aria-controls='collapse' + ${tipoFormacion.id}" aria-expanded="false">
+		          <span th:text="${tipoFormacion.nombre}"></span>
+		        </button>
+		      </h5>
+		    </div>
+		
+		    <div th:id="'collapse' + ${tipoFormacion.id}" class="collapse" th:attr="aria-labelledby='accordion'+${tipoFormacion.id}" data-parent="#accordion">
+		      <div class="card-body">
+			<div class="accordion" id="accordion2">
+			  <div class="card" th:each="categoria : ${tipoFormacion.categorias}">
+			    <div class="card-header" th:id="'accordion' + ${categoria.id}">
+			      <h5 class="mb-0">
+			        <button class="btn btn-link" data-toggle="collapse" th:attr="data-target='#collapse' + ${categoria.id}, aria-controls='collapse' + ${categoria.id}" aria-expanded="false">
+			          <span th:text="${categoria.nombre}"></span>
+			        </button>
+			      </h5>
+			    </div>
+			
+			    <div th:id="'collapse' + ${categoria.id}" class="collapse" th:attr="aria-labelledby='accordion'+${categoria.id}" data-parent="#accordion2">
+			      <div class="card-body">
+			      <ul class="list-group">
+			      <li class="list-group-item" th:each="curso : ${categoria.cursos}">
+			    	<span th:text="${curso.nombre}"></span> 
+			    	<a href="#" th:href="@{/editCurso?id=__${curso.id}__}">
+				    	<button type="submit" name="submit" class="btn btn-warning">
+							<i class="fas fa-edit"></i>
+						</button>
+					</a>
+					<a href="#" th:href="@{/removeCurso?id=__${curso.id}__}">
+						<button type="submit" name="submit" class="btn btn-danger">
+							<i class="fas fa-trash"></i>
+						</button>
+					</a>
+			      </li>
+			      </ul>
+			      </div>
+			    </div>
+			  </div>
+			</div>	
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+       <!-- <form>
             <div>
                 <input type="search" id="miBusqueda" name="q" placeholder="Buscar curso">
                 <button>Buscar</button>
             </div>
-        </form>
-        <li><input type="checkbox" name="list" id="nivel1-1"><label for="nivel1-1">Nivel 1</label>
-            <ul class="interior">
-                <li><input type="checkbox" name="list" id="nivel2-1"><label for="nivel2-1">Nivel 2</label>
-                    <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                    </ul>
-                </li>
-                <li><input type="checkbox" name="list" id="nivel2-2"><label for="nivel2-2">Nivel 2</label>
-                    <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                    </ul>
-                </li>
-                <li><a href="#r">Nivel 2</a></li>
-            </ul>
-        </li>
-        <li><input type="checkbox" name="list" id="nivel1-2" checked=""><label for="nivel1-2">Nivel 1</label>
-            <ul class="interior">
-                <li><a href="#r">Nivel 2</a></li>
-                <li><input type="checkbox" name="list" id="nivel2-3"><label for="nivel2-3">Nivel 2</label>
-                    <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                    </ul>
-                </li>
-                <li><input type="checkbox" name="list" id="nivel2-4"><label for="nivel2-4">Nivel 2</label>
-                    <ul class="interior">
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                        <li><a href="#r">Nivel 3</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href="#r">Nivel 1</a></li>
-    </ul>
+        </form>-->
+
 
 
     <!--PIE DE PÁGINA-->

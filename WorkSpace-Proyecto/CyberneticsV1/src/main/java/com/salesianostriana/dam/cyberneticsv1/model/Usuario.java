@@ -14,8 +14,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 
 import org.springframework.format.annotation.DateTimeFormat;
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
+//import org.springframework.security.core.GrantedAuthority;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -31,11 +30,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Usuario implements UserDetails{
+public abstract class Usuario //implements UserDetails
+{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private Long id;
 
 	private String nomUser;
 	private String pass;
@@ -92,45 +92,45 @@ public abstract class Usuario implements UserDetails{
 		this.credencialesCaducadas = false;
 	}
 
-	@Override
-	public abstract Collection<? extends GrantedAuthority> getAuthorities();
-
-	@Override
-	public String getPassword() {
-		// TODO Auto-generated method stub
-		return pass;
-	}
-
-	@Override
-	public String getUsername() {
-		// TODO Auto-generated method stub
-		return email;
-	}
-
-	@Override
-	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return !cuentaCaducada;
-	}
-
-	@Override
-	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return !cuentaBloqueada;
-	}
-
-	@Override
-	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return !credencialesCaducadas;
-	}
-
-	@Override
-	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return !cuentaBloqueada;
-	}
-	
+//	@Override
+//	public abstract Collection<? extends GrantedAuthority> getAuthorities();
+//
+//	@Override
+//	public String getPassword() {
+//		// TODO Auto-generated method stub
+//		return pass;
+//	}
+//
+//	@Override
+//	public String getUsername() {
+//		// TODO Auto-generated method stub
+//		return email;
+//	}
+//
+//	@Override
+//	public boolean isAccountNonExpired() {
+//		// TODO Auto-generated method stub
+//		return !cuentaCaducada;
+//	}
+//
+//	@Override
+//	public boolean isAccountNonLocked() {
+//		// TODO Auto-generated method stub
+//		return !cuentaBloqueada;
+//	}
+//
+//	@Override
+//	public boolean isCredentialsNonExpired() {
+//		// TODO Auto-generated method stub
+//		return !credencialesCaducadas;
+//	}
+//
+//	@Override
+//	public boolean isEnabled() {
+//		// TODO Auto-generated method stub
+//		return !cuentaBloqueada;
+//	}
+//	
 	
 	
 

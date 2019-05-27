@@ -14,8 +14,8 @@ import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+//import org.springframework.security.core.GrantedAuthority;
+//import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -64,8 +64,8 @@ public class Alumno extends Usuario {
 		this.pedido = pedido;
 	}
 	
-	@Override
-	public Collection<? extends GrantedAuthority> getAuthorities() {
-		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
-	}
+//	@Override
+//	public Collection<? extends GrantedAuthority> getAuthorities() {
+//		return Arrays.asList(new SimpleGrantedAuthority("ROLE_USER"));
+//	}
 }

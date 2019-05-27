@@ -1,0 +1,10 @@
+com.salesianostriana.dam.cyberneticsv1
+com.salesianostriana.dam.cyberneticsv1.baseservices
+com.salesianostriana.dam.cyberneticsv1.configuracion
+com.salesianostriana.dam.cyberneticsv1.controller
+com.salesianostriana.dam.cyberneticsv1.formbean
+com.salesianostriana.dam.cyberneticsv1.model
+com.salesianostriana.dam.cyberneticsv1.repository
+com.salesianostriana.dam.cyberneticsv1.security
+com.salesianostriana.dam.cyberneticsv1.service
+com.salesianostriana.dam.cyberneticsv1.storage

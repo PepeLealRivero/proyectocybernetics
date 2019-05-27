@@ -13,7 +13,10 @@ import com.salesianostriana.dam.cyberneticsv1.repository.CursoRepository;
 import com.salesianostriana.dam.cyberneticsv1.service.CursoService;
 
 /**
- * @author Jose
+ * @author Jose Leal
+ * @version 1.0
+ * 
+ * Esta clase controla todo lo que va a hacer el Administrador.
  *
  */
 @Controller
@@ -25,6 +28,11 @@ public class AdministradorController {
 	@Autowired
 	private CursoService cursoService;
 
+	/**
+	 * 
+	 * @param model
+	 * @return
+	 */
 	@GetMapping({ "/", "/list" })
 	public String listarTodos(Model model) {
 		model.addAttribute("lista", cursoService.findAll());

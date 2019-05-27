@@ -10,6 +10,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 /**
  * @author jleal
+ * @version 1.0
+ * 
+ * Esta clase es la que contiene todos los metedos generales que tendrán todos los repositorios de 
+ * nuestro programa, es por ello que se trabaja con un parámetro genérico.
  *
  */
 public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
@@ -18,7 +22,11 @@ public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 	protected R repositorio;
 
 	
-	
+	/**
+	 * 
+	 * @param t Es un parámetro genérico que nos sirve para cada repositorio
+	 * @return El método devuelve el objeto guardado en el repositorio.
+	 */
 	public T save(T t) {
 		return repositorio.save(t);
 	}
@@ -26,8 +34,8 @@ public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 	/**
 	 * Localizamos una entidad en base a su Id
 	 * 
-	 * @param id
-	 * @return
+	 * @param id El id de la entidad a buscar
+	 * @return Devuelve la entidad encontrado por el id
 	 */
 	public T findById(ID id) {
 		return repositorio.findById(id).orElse(null);
@@ -35,7 +43,7 @@ public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 	
 	/**
 	 * Obtenemos todas las entidades de un tipo de entidad
-	 * @return
+	 * @return Devuelve la lista de entidades
 	 */
 	public List<T> findAll() {
 		return repositorio.findAll();
@@ -44,7 +52,7 @@ public abstract class BaseServices <T, ID, R extends JpaRepository<T, ID>>{
 	/**
 	 * Editamos una instancia de una entidad (si no tiene Id, la insertamos).
 	 * @param t
-	 * @return
+	 * @return La entidad guardada
 	 */
 	public T edit(T t) {
 		return repositorio.save(t);

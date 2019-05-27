@@ -20,7 +20,10 @@ import com.salesianostriana.dam.cyberneticsv1.service.CursoService;
 import com.salesianostriana.dam.cyberneticsv1.service.UploadService;
 
 /**
- * @author Jose
+ * @author Jose Leal @version1.0
+ * 
+ *         Esta clase contiene todos los metodos de añadir, editar y borrar
+ *         cursos, y muestra la lista de cursos.
  *
  */
 @Controller()
@@ -35,6 +38,13 @@ public class CursoController {
 	@Autowired
 	CategoriaService categoriaService;
 
+	/**
+	 * Este metodo crea un nuevo curso dentro de una de las categorias que se
+	 * muestran.
+	 * 
+	 * @param model
+	 * @return Devuelve el formulario para crear curso.
+	 */
 	@GetMapping("/newCurso")
 	public String newCurso(Model model) {
 		model.addAttribute("cursoForm", new Curso());
@@ -43,27 +53,73 @@ public class CursoController {
 		return "admin/newCurso";
 	}
 
+	/**
+	 * Este metodo elimina un curso.
+	 * 
+	 * @param id
+	 * @return Devuelve la lista de cursos de nuevo actualizada.
+	 */
 	@GetMapping("/removeCurso")
 	public String removeCurso(@RequestParam(name = "id", required = true) Long id) {
 		cursoService.removeCurso(id);
 		return "redirect:/formaciones";
 	}
 
-//	@GetMapping("/editCurso")
-//	public String editCurso(@RequestParam(name = "id", required = true) Long id, Model model) {
-//		Curso cursoEdit = cursoService.findById(id);
-//		model.addAttribute("cursoForm", cursoEdit);
-//		model.addAttribute("categorias", categoriaService.findAll());
-//
-//		return "admin/newCurso";
-//	}
+	/**
+	 * Este metodo edita un curso.
+	 * 
+	 * @param id
+	 * @param model
+	 * @return Devuelve el formulario con los datos del curso que quieres editar
+	 *         cargados.
+	 */
+	@GetMapping("/editar/{id}")
+	public String mostrarFormularioEdicion(@PathVariable("id") long id, Model model) {
 
+		Curso cEditar = cursoService.findById(id);
+
+		if (cEditar != null) {
+			model.addAttribute("cursoForm", cEditar);
+			return "admin/newCurso";
+		} else {
+			// No existe ningún alumno con el Id proporcionado.
+			// Redirigimos hacia el listado.
+			return "redirect:/formaciones";
+		}
+
+	}
+
+	/**
+	 * Método que procesa la respuesta del formulario al editar
+	 */
+	@PostMapping("/editar/submit")
+	public String procesarFormularioEdicion(@ModelAttribute("cursoForm") Curso c) {
+		cursoService.edit(c);
+		return "redirect:/formaciones";// Volvemos a redirigir la listado a través del controller para pintar la lista
+							// actualizada con la modificación hecha
+	}
+
+	/**
+	 * Método que borrar un alumno por su Id
+	 * 
+	 * @param id
+	 * @return
+	 */
+
+	/**
+	 * Este método añade un curso nuevo comprobando que el nuevo curso no coincide
+	 * con otro curso con el mismo nombre.
+	 * 
+	 * @param curso
+	 * @param model
+	 * @return Devuelve el listado de cursos existentes
+	 */
 	@PostMapping("/addCurso")
 	public String envio(@ModelAttribute("cursoForm") Curso curso, Model model) {
 		if (curso.getId() == null) {
 			if (cursoService.findOneByNombre(curso.getNombre()) != null) {
 
-				model.addAttribute("errorRegistro", "Ya hay un curso con el mismo nombre y fecha de inicio.");
+				model.addAttribute("errorRegistro", "Ya hay un curso con el mismo nombre.");
 				model.addAttribute("cursoForm", curso);
 				model.addAttribute("categorias", categoriaService.findAll());
 				return "admin/newCurso";
